@@ -4,20 +4,6 @@ This is an extention that contains snippets useful for writing SuiteScript 2.0 (
 
 <li>All Information within these snippets was scraped from NetSuites Help Documents.
 
-## Installing
-
-Download this as a .zip
-<br>Unzip the folder, and drop that folder into your VS Code extension folder
-
-<br>Windows --- %USERPROFILE%\. vscode\extensions.
-<br>macOS --- ~/. vscode/extensions.
-<br>Linux --- ~/. vscode/extensions.
-
-<b>Q: Why didn't you just make it available on the VS Code Marketplace?</b>
-<br>A: I can't figure out how.
-<br><b>CAN YOU HELP ME??
-<br> PLEASE HELP ME</b> Message me on the NetSuite Professionals Slack <b>@dark black t-shirt</b>
-
 ## Snippet Format
 
 <ul>
@@ -33,7 +19,7 @@ Download this as a .zip
 
 You can type things like "**record.**" and you will see options for "**record.load**", "**record.copy**", "**record.attach**", etc.
 
-<img alt="wideSuggestionBox" width="850" src="./wideSuggestionBox.png" />
+<img alt="wideSuggestionBox" width="850" src="https://raw.githubusercontent.com/erjobi/SuiteSnippets/master/wideSuggestionBox.png" />
 
 ## <b>Snippet</b> Example
 
@@ -97,7 +83,7 @@ Also provided are enumerations from NetSuite Help Documents.
 ## <b>Enumeration</b> Example
 
 record.Type
-<img alt="enums" width="850" src="./enums.png" />
+<img alt="enums" width="850" src="https://raw.githubusercontent.com/erjobi/SuiteSnippets/master/enums.png" />
 
 # <b>SUGGESTION</b>
 
