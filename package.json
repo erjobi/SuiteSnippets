@@ -4,8 +4,11 @@
   "description": "Provides snippets for NetSuites SuiteScript 2.X",
   "version": "1.0.0",
   "publisher": "ericbirdsall",
+  "repository": {
+    "url": "https://github.com/erjobi/SuiteSnippets"
+  },
   "engines": {
-    "vscode": "^1.28.0"
+    "vscode": "^1.40.0"
   },
   "categories": [
     "Snippets"
