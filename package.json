@@ -1,0 +1,30 @@
+{
+  "name": "SuiteSnippets",
+  "displayName": "SuiteSnippets",
+  "description": "Provides snippets for NetSuites SuiteScript 2.X",
+  "version": "1.0.0",
+  "publisher": "dark-black-tshirt",
+  "engines": {
+    "vscode": "^1.28.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "suitescript",
+    "netsuite",
+    "suite script"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./suite-script-2.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./suite-script-2-examples.json"
+      }
+    ]
+  }
+}
