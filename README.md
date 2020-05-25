@@ -1,7 +1,22 @@
 # <b>SuiteSnippets
 
 This is an extention that contains snippets useful for writing SuiteScript 2.0 (or 2.X) for NetSuite.</b>
+
 <li>All Information within these snippets was scraped from NetSuites Help Documents.
+
+## Installing
+
+Download this as a .zip
+<br>Unzip the folder, and drop that folder into your VS Code extension folder
+
+<br>Windows --- %USERPROFILE%\. vscode\extensions.
+<br>macOS --- ~/. vscode/extensions.
+<br>Linux --- ~/. vscode/extensions.
+
+<b>Q: Why didn't you just make it available on the VS Code Marketplace?</b>
+<br>A: I can't figure out how.
+<br><b>CAN YOU HELP ME??
+<br> PLEASE HELP ME</b> Message me on the NetSuite Professionals Slack <b>@dark black t-shirt</b>
 
 ## Snippet Format
 
@@ -15,11 +30,13 @@ This is an extention that contains snippets useful for writing SuiteScript 2.0 (
 </uL>
 
 # <b>Snippets</b>
+
 You can type things like "**record.**" and you will see options for "**record.load**", "**record.copy**", "**record.attach**", etc.
 
 <img alt="wideSuggestionBox" width="850" src="./wideSuggestionBox.png" />
 
 ## <b>Snippet</b> Example
+
 record.load(options)
 
 <pre>
@@ -31,6 +48,7 @@ record.load({
 })</pre>
 
 <b>Notes:</b>
+
 <ul>
 <li>First tab stop allows you to rename "record" to "r" or anything else you imported the module as
 <li>After that, each value is a tab stop
@@ -39,10 +57,12 @@ record.load({
 </ul>
 
 # <b>Example Codes</b>
-Also provided are code samples from the NetSuite Help Documentation. 
+
+Also provided are code samples from the NetSuite Help Documentation.
 <br>Simply add "x." to the begining of your results and you will see any code samples NetSuite has provided.
 
 ## <b>Example Codes</b> Example
+
 x.record.load
 
 <pre>
@@ -70,10 +90,12 @@ var objRecord = record.load({
 </pre>
 
 # <b>Enumerations</b>
-Also provided are enumerations from NetSuite Help Documents. 
+
+Also provided are enumerations from NetSuite Help Documents.
 <br>When typing in the prefix of the enumeration, select the Enum snippet to populate a list of available enumerations.
 
 ## <b>Enumeration</b> Example
+
 record.Type
 <img alt="enums" width="850" src="./enums.png" />
 
@@ -83,7 +105,6 @@ To make this the most effect, I made my suggestion tree and details box wider. (
 
 This link brings you to an issue comment that allow you to make the suggestion tree and details wider:
 https://github.com/microsoft/vscode/issues/53565#issuecomment-405448123
-
 
 ## <b>ABOUT ME</b>
 
