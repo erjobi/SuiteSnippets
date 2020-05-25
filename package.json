@@ -3,7 +3,7 @@
   "displayName": "SuiteSnippets",
   "description": "Provides snippets for NetSuites SuiteScript 2.X",
   "version": "1.0.0",
-  "publisher": "dark-black-tshirt",
+  "publisher": "ericbirdsall",
   "engines": {
     "vscode": "^1.28.0"
   },
