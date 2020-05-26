@@ -19,7 +19,7 @@ This is an extention that contains snippets useful for writing SuiteScript 2.0 (
 
 You can type things like "**record.**" and you will see options for "**record.load**", "**record.copy**", "**record.attach**", etc.
 
-<img alt="wideSuggestionBox" width="850" src="https://raw.githubusercontent.com/erjobi/SuiteSnippets/master/wideSuggestionBox.png" />
+<img alt="SuiteSnippets" width="850" src="https://raw.githubusercontent.com/erjobi/SuiteSnippets/master/fullUse.gif" />
 
 ## <b>Snippet</b> Example
 
@@ -87,10 +87,16 @@ record.Type
 
 # <b>SUGGESTION</b>
 
-To make this the most effect, I made my suggestion tree and details box wider. (As shown in the first image)
+To make this the most effect, I made my suggestion tree and details box wider. (As shown in the GIF above)
 
 This link brings you to an issue comment that allow you to make the suggestion tree and details wider:
 https://github.com/microsoft/vscode/issues/53565#issuecomment-405448123
+
+# <b>CHANGE LOG</b>
+
+1.0.1 - May 26 2020
+<li> Example codes from help documents often include a line of "..." when NetSuite is indicating that there is code before/after the example. Updated these lines to "//..." so they are commented out by default.
+
 
 ## <b>ABOUT ME</b>
 
