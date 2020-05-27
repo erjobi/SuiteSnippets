@@ -94,7 +94,14 @@ https://github.com/microsoft/vscode/issues/53565#issuecomment-405448123
 
 # <b>CHANGE LOG</b>
 
-1.0.1 - May 26 2020
+<b>1.0.2 - May 27 2020</b>
+<li> Some enumerations were missing their choices - updated missing ones
+<li> Some methods were showing a blank choice tab stop after them - found and removed the tab stop
+<li> Updated Icon
+
+<br>
+
+<b>1.0.1 - May 26 2020</b>
 <li> Example codes from help documents often include a line of "..." when NetSuite is indicating that there is code before/after the example. Updated these lines to "//..." so they are commented out by default.
 
 
