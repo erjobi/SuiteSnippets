@@ -19,7 +19,7 @@ This is an extention that contains snippets useful for writing SuiteScript 2.0 (
 
 You can type things like "**record.**" and you will see options for "**record.load**", "**record.copy**", "**record.attach**", etc.
 
-<img alt="SuiteSnippets" width="850" src="https://raw.githubusercontent.com/erjobi/SuiteSnippets/master/fullUse.gif" />
+<img alt="SuiteSnippets" width="850" src="https://raw.githubusercontent.com/erjobi/SuiteSnippets/master/updatedFullUse.gif" />
 
 ## <b>Snippet</b> Example
 
