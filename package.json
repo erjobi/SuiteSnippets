@@ -2,7 +2,7 @@
   "name": "SuiteSnippets",
   "displayName": "SuiteSnippets",
   "description": "Provides snippets for NetSuites SuiteScript 2.X",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "publisher": "ericbirdsall",
   "repository": {
     "url": "https://github.com/erjobi/SuiteSnippets"

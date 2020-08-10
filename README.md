@@ -85,16 +85,17 @@ Also provided are enumerations from NetSuite Help Documents.
 record.Type
 <img alt="enums" width="850" src="https://raw.githubusercontent.com/erjobi/SuiteSnippets/master/enums.png" />
 
-# <b>SUGGESTION</b>
-
-To make this the most effect, I made my suggestion tree and details box wider. (As shown in the GIF above)
-
-This link brings you to an issue comment that allow you to make the suggestion tree and details wider:
-https://github.com/microsoft/vscode/issues/53565#issuecomment-405448123
-
 # <b>CHANGE LOG</b>
 
+<b>2.0.0 - August 10 2020</b>
+
+<li> NS 2020.1 Update included changes to SuiteScript - these have all been captured in this release
+    <ul><li>Please see "NetSuite 2020.1 Release Notes"</uL>
+<li> serverWidget.fieldType ENUM was missing some values - added missing values
+<li> record.submitFields was missing a closing brace - updated
+
 <b>1.0.2 - May 27 2020</b>
+
 <li> Some enumerations were missing their choices - updated missing ones
 <li> Some methods were showing a blank choice tab stop after them - found and removed the tab stop
 <li> Updated Icon
@@ -102,8 +103,8 @@ https://github.com/microsoft/vscode/issues/53565#issuecomment-405448123
 <br>
 
 <b>1.0.1 - May 26 2020</b>
-<li> Example codes from help documents often include a line of "..." when NetSuite is indicating that there is code before/after the example. Updated these lines to "//..." so they are commented out by default.
 
+<li> Example codes from help documents often include a line of "..." when NetSuite is indicating that there is code before/after the example. Updated these lines to "//..." so they are commented out by default.
 
 ## <b>ABOUT ME</b>
 

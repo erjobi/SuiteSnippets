@@ -398,8 +398,8 @@
     "prefix": "auth.changeEmail(options)",
     "body": [
       "${1:auth}.changeEmail({",
-      "\tpassword: ${2:string*},",
-      "\tnewEmail: ${3:string*},",
+      "\tnewEmail: ${2:string*},",
+      "\tpassword: ${3:string*},",
       "\tonlyThisAccount: ${4:boolean}",
       "})"
     ],
@@ -1707,6 +1707,11 @@
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=certificate.signXml(options)\n"
     ]
   },
+  "Home": {
+    "prefix": "Home",
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=Home for more information.",
+    "description": NO GRIDS ON PAGE - Home
+  },
   "certificate.HashAlg": {
     "prefix": "certificate.HashAlg",
     "body": "certificate.HashAlg.${1|SHA1,SHA256,SHA384,SHA512|}",
@@ -3008,15 +3013,15 @@
     "body": [
       "${1:email}.send({",
       "\tauthor: ${2:number*},",
-      "\trecipients: ${3:number[] | string[]*},",
-      "\treplyTo: ${4:string},",
-      "\tcc: ${5:number | number[] | string | string[]},",
-      "\tbcc: ${6:number | number[] | string | string[]},",
-      "\tsubject: ${7:string*},",
-      "\tbody: ${8:string*},",
-      "\tattachments: ${9:file.File},",
+      "\tbody: ${3:string*},",
+      "\trecipients: ${4:number | string | number[] | number[]*},",
+      "\tsubject: ${5:string*},",
+      "\tattachments: ${6:file.File},",
+      "\tbcc: ${7:number | string | number[] | number[]},",
+      "\tcc: ${8:number | string | number[] | number[]},",
+      "\tisInternalOnly: ${9:boolean},",
       "\trelatedRecords: ${10:Object},",
-      "\tisInternalOnly: ${11:boolean}",
+      "\treplyTo: ${11:string}",
       "})"
     ],
     "description": [
@@ -3052,15 +3057,15 @@
     "body": [
       "${1:email}.sendBulk({",
       "\tauthor: ${2:number*},",
-      "\trecipients: ${3:number[] | string[]*},",
-      "\treplyTo: ${4:string},",
-      "\tcc: ${5:number | number[] | string | string[]},",
-      "\tbcc: ${6:number | number[] | string | string[]},",
-      "\tsubject: ${7:string*},",
-      "\tbody: ${8:string*},",
-      "\tattachments: ${9:file.File},",
+      "\tbody: ${3:string*},",
+      "\trecipients: ${4:number | string | number[] | string[]*},",
+      "\tsubject: ${5:string*},",
+      "\tattachments: ${6:file.File},",
+      "\tbcc: ${7:number | number[] | string | string[]},",
+      "\tcc: ${8:number | number[] | string | string[]},",
+      "\tisInternalOnly: ${9:boolean},",
       "\trelatedRecords: ${10:Object},",
-      "\tisInternalOnly: ${11:boolean}",
+      "\treplyTo: ${11:string}",
       "})"
     ],
     "description": [
@@ -3174,20 +3179,6 @@
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=error.SuiteScriptError\n"
     ]
   },
-  "SuiteScriptError.id": {
-    "prefix": "SuiteScriptError.id",
-    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=SuiteScriptError.id for more information.",
-    "description": [
-      "N/error Module",
-      "SuiteScriptError.id\n",
-      "Property Description:\nError ID that is automatically generated when a new error is created.\n",
-      "Type:\nstring (read-only)\n",
-      "Supported Script Types:\nAll server scripts that are not user event scripts.\nFor more information, see SuiteScript 2.0 Script Types.\n",
-      "Module:\nN/error Module\n",
-      "Since:\n2015.2\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=SuiteScriptError.id\n"
-    ]
-  },
   "SuiteScriptError.cause": {
     "prefix": "SuiteScriptError.cause",
     "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=SuiteScriptError.cause for more information.",
@@ -3200,6 +3191,20 @@
       "Module:\nN/error Module\n",
       "Since:\n2015.2\n",
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=SuiteScriptError.cause\n"
+    ]
+  },
+  "SuiteScriptError.id": {
+    "prefix": "SuiteScriptError.id",
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=SuiteScriptError.id for more information.",
+    "description": [
+      "N/error Module",
+      "SuiteScriptError.id\n",
+      "Property Description:\nError ID that is automatically generated when a new error is created.\n",
+      "Type:\nstring (read-only)\n",
+      "Supported Script Types:\nAll server scripts that are not user event scripts.\nFor more information, see SuiteScript 2.0 Script Types.\n",
+      "Module:\nN/error Module\n",
+      "Since:\n2015.2\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=SuiteScriptError.id\n"
     ]
   },
   "SuiteScriptError.message": {
@@ -3230,6 +3235,20 @@
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=SuiteScriptError.name\n"
     ]
   },
+  "SuiteScriptError.notifyOff": {
+    "prefix": "SuiteScriptError.notifyOff",
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=SuiteScriptError.notifyOff for more information.",
+    "description": [
+      "N/error Module",
+      "SuiteScriptError.notifyOff\n",
+      "Property Description:\nSuppresses email notification when set to true.\n",
+      "Type:\nstring (read-only)\n",
+      "Supported Script Types:\nAll server scripts that are not user event scripts.\nFor more information, see SuiteScript 2.0 Script Types.\n",
+      "Module:\nN/error Module\n",
+      "Since:\n2015.2\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=SuiteScriptError.notifyOff\n"
+    ]
+  },
   "SuiteScriptError.stack": {
     "prefix": "SuiteScriptError.stack",
     "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=SuiteScriptError.stack for more information.",
@@ -3244,6 +3263,20 @@
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=SuiteScriptError.stack\n"
     ]
   },
+  "SuiteScriptError.type": {
+    "prefix": "SuiteScriptError.type",
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=SuiteScriptError.type for more information.",
+    "description": [
+      "N/error Module",
+      "SuiteScriptError.type\n",
+      "Property Description:\nError types. Use values defined in error.Type.\n",
+      "Type:\nstring (read-only)\n",
+      "Supported Script Types:\nAll server scripts that are not user event scripts.\nFor more information, see SuiteScript 2.0 Script Types.\n",
+      "Module:\nN/error Module\n",
+      "Since:\n2015.2\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=SuiteScriptError.type\n"
+    ]
+  },
   "error.UserEventError": {
     "prefix": "error.UserEventError",
     "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=error.UserEventError for more information.",
@@ -3255,6 +3288,20 @@
       "Module:\nN/error Module\n",
       "Since:\n2015.2\n",
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=error.UserEventError\n"
+    ]
+  },
+  "UserEventError.cause": {
+    "prefix": "UserEventError.cause",
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=UserEventError.cause for more information.",
+    "description": [
+      "N/error Module",
+      "UserEventError.cause\n",
+      "Property Description:\nThe cause of the error.\n",
+      "Type:\nstring (read-only)\n",
+      "Supported Script Types:\nUser event scripts\nFor more information, see SuiteScript 2.0 User Event Script Type.\n",
+      "Module:\nN/error Module\n",
+      "Since:\n2015.2\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=UserEventError.cause\n"
     ]
   },
   "UserEventError.eventType": {
@@ -3285,20 +3332,6 @@
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=UserEventError.id\n"
     ]
   },
-  "UserEventError.cause": {
-    "prefix": "UserEventError.cause",
-    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=UserEventError.cause for more information.",
-    "description": [
-      "N/error Module",
-      "UserEventError.cause\n",
-      "Property Description:\nThe cause of the error.\n",
-      "Type:\nstring (read-only)\n",
-      "Supported Script Types:\nUser event scripts\nFor more information, see SuiteScript 2.0 User Event Script Type.\n",
-      "Module:\nN/error Module\n",
-      "Since:\n2015.2\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=UserEventError.cause\n"
-    ]
-  },
   "UserEventError.message": {
     "prefix": "UserEventError.message",
     "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=UserEventError.message for more information.",
@@ -3325,6 +3358,20 @@
       "Module:\nN/error Module\n",
       "Since:\n2015.2\n",
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=UserEventError.name\n"
+    ]
+  },
+  "UserEventError.notifyOff": {
+    "prefix": "UserEventError.notifyOff",
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=UserEventError.notifyOff for more information.",
+    "description": [
+      "N/error Module",
+      "UserEventError.notifyOff\n",
+      "Property Description:\nSuppresses email notification when set to true.\n",
+      "Type:\nstring (read-only)\n",
+      "Supported Script Types:\nUser event scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
+      "Module:\nN/error Module\n",
+      "Since:\n2015.2\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=UserEventError.notifyOff\n"
     ]
   },
   "UserEventError.recordId": {
@@ -3355,6 +3402,20 @@
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=UserEventError.stack\n"
     ]
   },
+  "UserEventError.type": {
+    "prefix": "UserEventError.type",
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=UserEventError.type for more information.",
+    "description": [
+      "N/error Module",
+      "UserEventError.type\n",
+      "Property Description:\nError types. Use values defined in error.Type.\n",
+      "Type:\nstring (read-only)\n",
+      "Supported Script Types:\nUser event scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
+      "Module:\nN/error Module\n",
+      "Since:\n2015.2\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=UserEventError.type\n"
+    ]
+  },
   "error.create(options)": {
     "prefix": "error.create(options)",
     "body": [
@@ -3367,13 +3428,25 @@
     "description": [
       "N/error Module",
       "error.create()\n",
-      "Method Description:\nCreates a new error.SuiteScriptError object.\nUse the error.SuiteScriptError or error.UserEventError object in a try-catch statement to abort script execution.\n",
+      "Method Description:\nCreates a new error.SuiteScriptError object.\nUse the error.SuiteScriptError or error.UserEventError object in a try-catch statement to abort script execution.\nNote this method creates a new error, but does not throw the error. Your script code will need to include logic to throw the error when appropriate.\n",
       "Returns:\nAn error.SuiteScriptError object.\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Governance:\nNone\n",
       "Module:\nN/error Module\n",
       "Since:\n2015.2\n",
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=error.create(options)\n"
+    ]
+  },
+  "error.Type": {
+    "prefix": "error.Type",
+    "body": "error.Type.${1|A_SCRIPT_IS_ATTEMPTING_TO_EDIT_THE_1_SUBLIST_THIS_SUBLIST_IS_CURRENTLY_IN_READONLY_MODE_AND_CANNOT_\n\nBE_EDITED_CALL_YOUR_NETSUITE_ADMINISTRATOR_TO_DISABLE_THIS_SCRIPT_IF_YOU_NEED_TO_SUBMIT_THIS_RECORD,AT_LEAST_ONE_EXPRESSION_IS_NEEDED,BUTTONS_MUST_INCLUDE_BOTH_A_LABEL_AND_VALUE,CAN_REFERENCE_ONLY_PERSISTED_DATASET,CANNOT_CREATE_RECORD_DRAFT_OF_EXISTING_RECORD,CANNOT_CREATE_RECORD_INSTANCE,CANNOT_DETERMINE_TYPE_FOR_ALIAS,CANNOT_DETERMINE_VALUE_FOR_ALIAS,CANNOT_RESUBMIT_SUBMITTED_ASYNC_QUERY_TASK,CANNOT_RESUBMIT_SUBMITTED_ASYNC_SEARCH_TASK,CANNOT_RESUBMIT_SUBMITTED_ASYNC_SUITEQL_TASK,COLOR_VALUE_MUST_BE_6_HEXADECIMAL_DIGITS_OF_THE_FORM_RRGGBB__EXAMPLE_FF0000_FOR_RED,CREDIT_CARD_NUMBER_IS_NOT_VALID__PLEASE_CHECK_THAT_ALL_DIGITS_WERE_ENTERED_CORRECTLY,CREDIT_CARD_NUMBER_MUST_CONTAIN_ONLY_DIGITS,CREDIT_CARD_NUMBERS_MUST_CONTAIN_BETWEEN_13_AND_20_DIGITS,DATASET_NAME_IS_MISSING,EACH_VIEW_MUST_HAVE_A_NAME,EACH_VIEW_MUST_HAVE_AN_ID,EMPTY_KEY_NOT_ALLOWED,FAILED_AN_UNEXPECTED_ERROR_OCCURRED,FIELD_1_ALREADY_CONTAINS_A_SUBRECORD_YOU_CANNOT_CALL_CREATESUBRECORD,FIELD_1_CANNOT_BE_EMPTY,FIELD_1_IS_NOT_A_SUBRECORD_FIELD,FIELD_MUST_CONTAIN_A_VALUE,FORM_VALIDATION_FAILED_YOU_CANNOT_CREATE_THIS_SUBRECORD,FORM_VALIDATION_FAILED_YOU_CANNOT_SUBMIT_THIS_RECORD,HISTORY_IS_ONLY_AVAILABLE_FOR_THE_LAST_30_DAYS,ID_CANNOT_HAVE_MORE_THAN_N_CHARACTERS,IDENTIFIERS_CAN_CONTAIN_ONLY_DIGITS_ALPHABETIC_CHARACTERS_OR_WITH_NO_SPACES,INVALID_AGGREGATE_TYPE,INVALID_AGGREGATION,INVALID_ALGORITHM,INVALID_ASPECT_TYPE,INVALID_CERTIFICATE_TYPE,INVALID_CHART_TYPE,INVALID_COLUMN_FOR_SORTING,INVALID_CONFIGURATION_UNABLE_TO_CHANGE_REQUIRE_CONFIGURATION_FOR_1,INVALID_CONFIGURATION_UNABLE_TO_CHANGE_REQUIRE_CONFIGURATION_WITHOUT_A_CONTEXT,INVALID_CUSTOM_VIEW_VALUE,INVALID_DATASET_ID,INVALID_DATE_ID,INVALID_DATE_VALUE_MUST_BE_1,INVALID_DATE_VALUE_MUST_BE_ON_OR_AFTER_1CUTOFF_DATE,INVALID_DIRECTION_FOR_SORTING,INVALID_EMAILS_FOUND,INVALID_EXPRESSION,INVALID_FIELD_CONTEXT,INVALID_FIELD_ID,INVALID_FIELD_INDEX,INVALID_FIELD_VALUE,INVALID_FILTER_FIELD_FOR_CURRENT_VIEW,INVALID_FLD_VALUE,INVALID_FORMULA_TYPE,INVALID_HTTP_METHOD,INVALID_ID_PREFIX,INVALID_KEY_TYPE,INVALID_LOCALE,INVALID_NUMBER_MUST_BE_BETWEEN_1_AND_2,INVALID_NUMBER_MUST_BE_GREATE_THAN_1,INVALID_NUMBER_MUST_BE_LOWER_THAN_1,INVALID_NUMBER_OR_PERCENTAGE,INVALID_OPERATION,INVALID_OPERATOR,INVALID_OR_UNSUPPORTED_RECORD_TYPE_1,INVALID_PAGE_INDEX,INVALID_PAGE_RANGE,INVALID_PERIOD_ADJUSTMENT,INVALID_PERIOD_CODE,INVALID_PERIOD_TYPE,INVALID_RCRD_TYPE,INVALID_RETURN_TYPE_EXPECTED_1,INVALID_SEARCH_OPERATOR,INVALID_SEARCH_TYPE,INVALID_SIGNATURE,INVALID_SIGNATURE_TAG,INVALID_SORT,INVALID_SORT_LOCALE,INVALID_STACKING_TYPE,INVALID_SUBRECORD_MERGE,INVALID_SUBRECORD_REFERENCE,INVALID_SUITEAPP_APPLICATION_ID,INVALID_TASK_TYPE,INVALID_TOTAL_LINE,INVALID_URL_SPACES_ARE_NOT_ALLOWED_IN_THE_URL,INVALID_URL_URL_MUST_START_WITH_HTTP_HTTPS_FTP_OR_FILE,INVALID_WORKBOOK_ID,MUTUALLY_EXCLUSIVE_ARGUMENTS,NAME_CANNOT_BE_EMPTY,NAME_CANNOT_HAVE_MORE_THAN_N_CHARACTERS,NEITHER_ARGUMENT_DEFINED,NO_ASPECTS_DEFINED,NO_CHILDREN_DEFINED,NO_COLUMN_DEFINED,NO_DIMENSION_ITEM_DEFINED,NO_ELEMENTS_DEFINED,NO_SORT_BY_DEFINED,NON_KATAKANA_DATA_FOUND,NOT_SUPPORTED_ON_CURRENT_SUBRECORD,NOTICE_THE_CREDIT_CARD_APPEARS_TO_BE_INCORRECT,OPERATION_IS_NOT_ALLOWED,OPERATOR_ARITY_MISMATCH,PASSWORD_CANNOT_HAVE_MORE_THAN_N_CHARACTERS,PHONE_NUMBER_SHOULD_HAVE_SEVEN_DIGITS_OR_MORE,PLEASE_ENTER_A_VALID_FROM_START_DATE_IN_MMYYYY_FORMAT,PLEASE_ENTER_AN_EXPIRATION_DATE_IN_MMYYYY_FORMAT,PLEASE_INCLUDE_THE_AREA_CODE_FOR_PHONE_NUMBER,PROPERTY_VALUE_CONFLICT,READ_ONLY_PROPERTY,RELATIONSHIP_ALREADY_USED,SCRIPT_EXECUTION_USAGE_LIMIT_EXCEEDED,SELECT_OPTION_ALREADY_PRESENT,SELECT_OPTION_NOT_FOUND,SIGNATURE_VERIFICATION_FAILED,SSS_ARGUMENT_DISCREPANCY,SSS_DUPLICATE_ALIAS,SSS_INVALID_ACTION_ID,SSS_INVALID_API_USAGE,SSS_INVALID_COUNTRY_ID,SSS_INVALID_CURRENCY_ID,SSS_INVALID_FORMAT_TYPE,SSS_INVALID_GETSELECTOPTION_FILTER_OPERATOR,SSS_INVALID_MACRO_ID,SSS_INVALID_READ_SIZE,SSS_INVALID_SEARCH_RESULT_INDEX,SSS_INVALID_SEGMENT_SEPARATOR,SSS_INVALID_SRCH_OPERATOR,SSS_INVALID_SUBLIST,SSS_INVALID_SUBLIST_OPERATION,SSS_INVALID_TYPE_ARG,SSS_INVALID_UI_OBJECT_TYPE,SSS_INVALID_URL,SSS_METHOD_IS_ONLY_ALLOWED_FOR_MATRIX_FIELD,SSS_METHOD_IS_ONLY_ALLOWED_FOR_MULTISELECT_FIELD,SSS_METHOD_IS_ONLY_FOR_SELECT_FIELD,SSS_MISSING_ALIAS,SSS_MISSING_REQD_ARGUMENT,SSS_NOT_YET_SUPPORTED,SSS_RECORD_DOES_NOT_SATISFY_CONDITION,SSS_RECORD_TYPE_MISMATCH,SSS_SEARCH_FOR_EACH_LIMIT_EXCEEDED,SSS_SEARCH_RESULT_LIMIT_EXCEEDED,SSS_SUBLIST_DOESNT_SUPPORT_MOVING_LINES,SSS_TAG_CANNOT_BE_EMPTY,SSS_TAX_REGISTRATION_REQUIRED,SSS_UNSUPPORTED_METHOD,TABLE_DOES_NOT_EXIST,THAT_RECORD_IS_NOT_EDITABLE,THE_FIELD_1_CONTAINED_MORE_THAN_THE_MAXIMUM_NUMBER_2_OF_CHARACTERS_ALLOWED,THE_OPTIONS_ARE_MUTUALLY_EXCLUSIVE_1_2_ARG2,TOO_MANY_RESULTS,TRANSLATION_HANDLE_IS_IN_AN_ILLEGAL_STATE,UNHANDLED_ERRORS_ON_RESTORE,UNKNOWN_CONTEXT_TYPE,UNKNOWN_PARAM,VALUE_1_OUTSIDE_OF_VALID_MINMAX_RANGE_FOR_FIELD_2,WORKBOOK_NAME_IS_MISSING,WRONG_PARAMETER_TYPE,WS_INVALID_REFERENCE_KEY_1,WS_NO_PERMISSIONS_TO_SET_VALUE,YOU_HAVE_ATTEMPTED_AN_UNSUPPORTED_ACTION|}",
+    "description": [
+      "N/error Module",
+      "error.Type\n",
+      "Enum Description:\nHolds the string values for error types. You can use these error types and write your own corresponding error messages. This may be useful if you are developing a SuiteScript library.\nJavaScript does not include an enumeration type. The SuiteScript 2.0 documentation utilizes the term enumeration (or enum) to describe a plain JavaScript object with a flat, map-like structure. Within this object, each key points to a read-only string value.\n",
+      "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
+      "Module:\nN/error Module\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=error.Type\n"
     ]
   },
   "file.File": {
@@ -4285,16 +4358,12 @@
   },
   "ClientResponse.body": {
     "prefix": "ClientResponse.body",
-    "body": [
-      "${1:ClientResponse}.body{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ClientResponse.body for more information.",
     "description": [
       "N/http Module",
       "ClientResponse.body\n",
-      "Property Description:\nThe client response body.\nThis property is read-only.\n",
-      "Type:\nstring\n",
+      "Property Description:\nThe client response body.\n.\n",
+      "Type:\nstring (read-only)\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/http Module\n",
       "Parent Object:\nhttp.ClientResponse\n",
@@ -4305,16 +4374,12 @@
   },
   "ClientResponse.code": {
     "prefix": "ClientResponse.code",
-    "body": [
-      "${1:ClientResponse}.code{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ClientResponse.code for more information.",
     "description": [
       "N/http Module",
       "ClientResponse.code\n",
-      "Property Description:\nThe client HTTP response or status code.\nThis property is read-only.\n",
-      "Type:\nnumber\n",
+      "Property Description:\nThe client HTTP response or status code.\n",
+      "Type:\nnumber (read-only)\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/http Module\n",
       "Parent Object:\nhttp.ClientResponse\n",
@@ -4325,16 +4390,12 @@
   },
   "ClientResponse.headers": {
     "prefix": "ClientResponse.headers",
-    "body": [
-      "${1:ClientResponse}.headers{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ClientResponse.headers for more information.",
     "description": [
       "N/http Module",
       "ClientResponse.headers\n",
-      "Property Description:\nThe response header or headers.\nThis property is read-only.\nFor more information, see HTTP Header Information.\n",
-      "Type:\nObject\n",
+      "Property Description:\nThe response header or headers.\nFor more information, see HTTP Header Information.\n",
+      "Type:\nObject (read-only)\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/http Module\n",
       "Parent Object:\nhttp.ClientResponse\n",
@@ -4402,16 +4463,12 @@
   },
   "ServerRequest.body": {
     "prefix": "ServerRequest.body",
-    "body": [
-      "${1:ServerRequest}.body{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ServerRequest.body for more information.",
     "description": [
       "N/http Module",
       "ServerRequest.body\n",
-      "Property Description:\nThe server request body.\nThis property is read-only.\n",
-      "Type:\nstring\n",
+      "Property Description:\nThe server request body.\n",
+      "Type:\nstring (read-only)\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/http Module\n",
       "Parent Object:\nhttp.ServerRequest\n",
@@ -4422,16 +4479,12 @@
   },
   "ServerRequest.files": {
     "prefix": "ServerRequest.files",
-    "body": [
-      "${1:ServerRequest}.files{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ServerRequest.files for more information.",
     "description": [
       "N/http Module",
       "ServerRequest.files\n",
-      "Property Description:\nThe server request files.\nThis property is read-only.\n",
-      "Type:\nObject\n",
+      "Property Description:\nThe server request files.\n",
+      "Type:\nObject (read-only)\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/http Module\n",
       "Parent Object:\nhttp.ServerRequest\n",
@@ -4442,16 +4495,12 @@
   },
   "ServerRequest.headers": {
     "prefix": "ServerRequest.headers",
-    "body": [
-      "${1:ServerRequest}.headers{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ServerRequest.headers for more information.",
     "description": [
       "N/http Module",
       "ServerRequest.headers\n",
-      "Property Description:\nThe header information included in the http call. This object represents a series of key/value pairs. Each pair represents a request header name and its value.\nTypically, this object encapsulates two iterations of each header name: one in lower case and another in title case. This behavior is designed so that you can use either lower case or title case when you reference a header. However, the existence of title-case iterations of header names is not guaranteed. For best results, refer to header names using all lower-case letters (and hyphens, when applicable).\nThis property is read-only.\nThe request headers and their values are subject to change. If you use these headers in your scripts, you are responsible for testing them to make sure that they contain the information you need. For example, when making an HTTP call to a Suitelet, some headers might be filtered out. Filtering can occur if the headers affect how NetSuite processes the request internally. These filtered headers are not available to the Suitelet, so you should test to see whether a header was filtered out. If so, use a different header instead.\nFor more information, see HTTP Header Information.\n",
-      "Type:\nObject\n",
+      "Property Description:\nThe header information included in the http call. This object represents a series of key/value pairs. Each pair represents a request header name and its value.\nTypically, this object encapsulates two iterations of each header name: one in lower case and another in title case. This behavior is designed so that you can use either lower case or title case when you reference a header. However, the existence of title-case iterations of header names is not guaranteed. For best results, refer to header names using all lower-case letters (and hyphens, when applicable).\nThe request headers and their values are subject to change. If you use these headers in your scripts, you are responsible for testing them to make sure that they contain the information you need. For example, when making an HTTP call to a Suitelet, some headers might be filtered out. Filtering can occur if the headers affect how NetSuite processes the request internally. These filtered headers are not available to the Suitelet, so you should test to see whether a header was filtered out. If so, use a different header instead.\nFor more information, see HTTP Header Information.\n",
+      "Type:\nObject (read-only)\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/http Module\n",
       "Parent Object:\nhttp.ServerRequest\n",
@@ -4462,16 +4511,12 @@
   },
   "ServerRequest.clientIpAddress": {
     "prefix": "ServerRequest.clientIpAddress",
-    "body": [
-      "${1:ServerRequest}.clientIpAddress{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ServerRequest.clientIpAddress for more information.",
     "description": [
       "N/http Module",
       "ServerRequest.clientIpAddress\n",
-      "Property Description:\nThe remote client IP address.\nThis property is read-only.\n",
-      "Type:\nstring\n",
+      "Property Description:\nThe remote client IP address.\n",
+      "Type:\nstring (read-only)\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/http Module\n",
       "Parent Object:\nhttp.ServerRequest\n",
@@ -4482,16 +4527,12 @@
   },
   "ServerRequest.method": {
     "prefix": "ServerRequest.method",
-    "body": [
-      "${1:ServerRequest}.method{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ServerRequest.method for more information.",
     "description": [
       "N/http Module",
       "ServerRequest.method\n",
-      "Property Description:\nThe server request HTTP method.\nThis property is read-only.\n",
-      "Type:\nhttp.Method\n",
+      "Property Description:\nThe server request HTTP method.\n",
+      "Type:\nhttp.Method (read-only)\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/http Module\n",
       "Parent Object:\nhttp.ServerRequest\n",
@@ -4502,16 +4543,12 @@
   },
   "ServerRequest.parameters": {
     "prefix": "ServerRequest.parameters",
-    "body": [
-      "${1:ServerRequest}.parameters{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ServerRequest.parameters for more information.",
     "description": [
       "N/http Module",
       "ServerRequest.parameters\n",
-      "Property Description:\nThe server request parameters, as name-value pairs. Note that if the server request is a Get request, parameters are sent as part of the URL. If the server request is a Post request, parameters are sent within the request body.\nThis property is read-only.\nParameters cannot be arrays. Use JSON.stringify/JSON.parse instead to handle arrays.\n",
-      "Type:\nObject\n",
+      "Property Description:\nThe server request parameters, as name-value pairs. Note that if the server request is a Get request, parameters are sent as part of the URL. If the server request is a Post request, parameters are sent within the request body.\nParameters cannot be arrays. Use JSON.stringify/JSON.parse instead to handle arrays.\n",
+      "Type:\nObject (read-only)\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/http Module\n",
       "Parent Object:\nhttp.ServerRequest\n",
@@ -4522,16 +4559,12 @@
   },
   "ServerRequest.url": {
     "prefix": "ServerRequest.url",
-    "body": [
-      "${1:ServerRequest}.url{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ServerRequest.url for more information.",
     "description": [
       "N/http Module",
       "ServerRequest.url\n",
-      "Property Description:\nThe server request URL.\nThis property is read-only.\n",
-      "Type:\nstring\n",
+      "Property Description:\nThe server request URL.\n",
+      "Type:\nstring (read-only)\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/http Module\n",
       "Parent Object:\nhttp.ServerRequest\n",
@@ -4772,16 +4805,12 @@
   },
   "ServerResponse.headers": {
     "prefix": "ServerResponse.headers",
-    "body": [
-      "${1:ServerResponse}.headers{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ServerResponse.headers for more information.",
     "description": [
       "N/http Module",
       "ServerResponse.headers\n",
-      "Property Description:\nThe server response headers.\nThis property is read-only.\nFor more information, see HTTP Header Information.\n",
-      "Type:\nObject\nIf multiple values are assigned to one header name, the values are returned as an array. For example:\n",
+      "Property Description:\nThe server response headers.\nFor more information, see HTTP Header Information.\n",
+      "Type:\nObject (read-only)\nIf multiple values are assigned to one header name, the values are returned as an array. For example:\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/http Module\n",
       "Parent Object:\nhttp.ServerResponse\n",
@@ -4866,8 +4895,8 @@
     "prefix": "http.post(options)",
     "body": [
       "${1:http}.post({",
-      "\turl: ${2:string*},",
-      "\tbody: ${3:string | Object*},",
+      "\tbody: ${2:string | Object*},",
+      "\turl: ${3:string*},",
       "\theaders: ${4:Object}",
       "})"
     ],
@@ -4903,8 +4932,8 @@
     "prefix": "http.put(options)",
     "body": [
       "${1:http}.put({",
-      "\turl: ${2:string*},",
-      "\tbody: ${3:string | Object*},",
+      "\tbody: ${2:string | Object*},",
+      "\turl: ${3:string*},",
       "\theaders: ${4:Object}",
       "})"
     ],
@@ -5072,7 +5101,7 @@
     "description": [
       "N/https Module",
       "SecureString.convertEncoding()\n",
-      "Method Description:\nChanges the encoding of a https.SecureString\n",
+      "Method Description:\nChanges the encoding of a https.SecureString.\n",
       "Returns:\nhttps.SecureString\n",
       "Governance:\nNone\n",
       "Module:\nN/https Module\n",
@@ -5123,8 +5152,8 @@
     "prefix": "https.createSecureKey(options)",
     "body": [
       "${1:https}.createSecureKey({",
-      "\tencoding: ${2:https.Encoding},",
-      "\tguid: ${3:string*}",
+      "\tguid: ${2:string*},",
+      "\tencoding: ${3:https.Encoding}",
       "})"
     ],
     "description": [
@@ -5206,16 +5235,12 @@
   },
   "ClientResponse.body": {
     "prefix": "ClientResponse.body",
-    "body": [
-      "${1:ClientResponse}.body{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ClientResponse.body for more information.",
     "description": [
       "N/https Module",
       "ClientResponse.body\n",
-      "Property Description:\nThe client response body.\nThis property is read-only.\n",
-      "Type:\nstring\n",
+      "Property Description:\nThe client response body.\n",
+      "Type:\nstring (read-only)\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/https Module\n",
       "Since:\n2015.2\n",
@@ -5224,16 +5249,12 @@
   },
   "ClientResponse.code": {
     "prefix": "ClientResponse.code",
-    "body": [
-      "${1:ClientResponse}.code{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ClientResponse.code for more information.",
     "description": [
       "N/https Module",
       "ClientResponse.code\n",
-      "Property Description:\nThe client HTTP response or status code.\nThis property is read-only.\n",
-      "Type:\nnumber\n",
+      "Property Description:\nThe client HTTP response or status code.\n",
+      "Type:\nnumber (read-only)\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/https Module\n",
       "Since:\n2015.2\n",
@@ -5242,16 +5263,12 @@
   },
   "ClientResponse.headers": {
     "prefix": "ClientResponse.headers",
-    "body": [
-      "${1:ClientResponse}.headers{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ClientResponse.headers for more information.",
     "description": [
       "N/https Module",
       "ClientResponse.headers\n",
-      "Property Description:\nThe response header or headers.\nThis property is read-only.\nFor more information, see HTTPS Header Information.\n",
-      "Type:\nObject\n",
+      "Property Description:\nThe response header or headers.\nFor more information, see HTTPS Header Information.\n",
+      "Type:\nObject (read-only)\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/https Module\n",
       "Since:\n2015.2\n",
@@ -5295,8 +5312,8 @@
     "body": [
       "${1:ServerRequest}.getSublistValue({",
       "\tgroup: ${2:string*},",
-      "\tname: ${3:string*},",
-      "\tline: ${4:string*}",
+      "\tline: ${3:string*},",
+      "\tname: ${4:string*}",
       "})"
     ],
     "description": [
@@ -5313,16 +5330,12 @@
   },
   "ServerRequest.body": {
     "prefix": "ServerRequest.body",
-    "body": [
-      "${1:ServerRequest}.body{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ServerRequest.body for more information.",
     "description": [
       "N/https Module",
       "ServerRequest.body\n",
-      "Property Description:\nThe server request body.\nThis property is read-only.\n",
-      "Type:\nstring\n",
+      "Property Description:\nThe server request body.\n",
+      "Type:\nstring (read-only)\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/https Module\n",
       "Since:\n2015.2\n",
@@ -5331,16 +5344,12 @@
   },
   "ServerRequest.files": {
     "prefix": "ServerRequest.files",
-    "body": [
-      "${1:ServerRequest}.files{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ServerRequest.files for more information.",
     "description": [
       "N/https Module",
       "ServerRequest.files\n",
-      "Property Description:\nThe server request files.\nThis property is read-only.\n",
-      "Type:\nObject\n",
+      "Property Description:\nThe server request files.\n",
+      "Type:\nObject (read-only)\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/https Module\n",
       "Since:\n2015.2\n",
@@ -5349,16 +5358,12 @@
   },
   "ServerRequest.headers": {
     "prefix": "ServerRequest.headers",
-    "body": [
-      "${1:ServerRequest}.headers{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ServerRequest.headers for more information.",
     "description": [
       "N/https Module",
       "ServerRequest.headers\n",
-      "Property Description:\nThis object represents a series of key/value pairs. Each pair represents a server request header name and its value.\nTypically, this object encapsulates two iterations of each header name: one in lower case and another in title case. This behavior is designed so that you can use either lower case or title case when you reference a header. However, the existence of title-case iterations of header names is not guaranteed. For best results, refer to header names using all lower-case letters (and hyphens, when applicable).\nThis property is read-only.\nThe server request headers and their values are subject to change. If you use these headers in your scripts, you are responsible for testing them to make sure that they contain the information you need. For example, when making an HTTP call to a Suitelet, some headers might be filtered out. Filtering can occur if the headers affect how NetSuite processes the request internally. These filtered headers are not available to the Suitelet, so you should test to see whether a header was filtered out. If so, use a different header instead.\nFor more information, see HTTPS Header Information.\n",
-      "Type:\nObject\n",
+      "Property Description:\nThis object represents a series of key/value pairs. Each pair represents a server request header name and its value.\nTypically, this object encapsulates two iterations of each header name: one in lower case and another in title case. This behavior is designed so that you can use either lower case or title case when you reference a header. However, the existence of title-case iterations of header names is not guaranteed. For best results, refer to header names using all lower-case letters (and hyphens, when applicable).\nThe server request headers and their values are subject to change. If you use these headers in your scripts, you are responsible for testing them to make sure that they contain the information you need. For example, when making an HTTP call to a Suitelet, some headers might be filtered out. Filtering can occur if the headers affect how NetSuite processes the request internally. These filtered headers are not available to the Suitelet, so you should test to see whether a header was filtered out. If so, use a different header instead.\nFor more information, see HTTPS Header Information.\n",
+      "Type:\nObject (read-only)\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/https Module\n",
       "Since:\n2015.2\n",
@@ -5367,16 +5372,12 @@
   },
   "ServerRequest.method": {
     "prefix": "ServerRequest.method",
-    "body": [
-      "${1:ServerRequest}.method{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ServerRequest.method for more information.",
     "description": [
       "N/https Module",
       "ServerRequest.method\n",
-      "Property Description:\nThe server request HTTPS method.\nThis property is read-only.\n",
-      "Type:\nenum\n",
+      "Property Description:\nThe server request HTTPS method.\n",
+      "Type:\nenum (read-only)\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/https Module\n",
       "Since:\n2015.2\n",
@@ -5385,16 +5386,12 @@
   },
   "ServerRequest.parameters": {
     "prefix": "ServerRequest.parameters",
-    "body": [
-      "${1:ServerRequest}.parameters{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ServerRequest.parameters for more information.",
     "description": [
       "N/https Module",
       "ServerRequest.parameters\n",
-      "Property Description:\nThe server request parameters, as name-value pairs. Note that if the server request is a Get request, parameters are sent as part of the URL. If the server request is a Post request, parameters are sent within the request body.\nThis property is read-only.\nParameters cannot be arrays. Use JSON.stringify/JSON.parse instead to handle arrays.\n",
-      "Type:\nObject\n",
+      "Property Description:\nThe server request parameters, as name-value pairs. Note that if the server request is a Get request, parameters are sent as part of the URL. If the server request is a Post request, parameters are sent within the request body.\nParameters cannot be arrays. Use JSON.stringify/JSON.parse instead to handle arrays.\n",
+      "Type:\nObject (read-only)\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/https Module\n",
       "Parent Object:\nhttps.ServerRequest\n",
@@ -5405,16 +5402,12 @@
   },
   "ServerRequest.url": {
     "prefix": "ServerRequest.url",
-    "body": [
-      "${1:ServerRequest}.url{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ServerRequest.url for more information.",
     "description": [
       "N/https Module",
       "ServerRequest.url\n",
-      "Property Description:\nThe server request URL.\nThis property is read-only.\n",
-      "Type:\nstring\n",
+      "Property Description:\nThe server request URL.\n",
+      "Type:\nstring (read-only)\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/https Module\n",
       "Since:\n2015.2\n",
@@ -5496,10 +5489,10 @@
     "prefix": "ServerResponse.sendRedirect(options)",
     "body": [
       "${1:ServerResponse}.sendRedirect({",
-      "\ttype: ${2:string*},",
-      "\tidentifier: ${3:number | string*},",
-      "\tid: ${4:string},",
-      "\teditMode: ${5:boolean true | false},",
+      "\tidentifier: ${2:number | string*},",
+      "\ttype: ${3:string*},",
+      "\teditMode: ${4:boolean true | false},",
+      "\tid: ${5:string},",
       "\tparameters: ${6:object}",
       "})"
     ],
@@ -5633,16 +5626,12 @@
   },
   "ServerResponse.headers": {
     "prefix": "ServerResponse.headers",
-    "body": [
-      "${1:ServerResponse}.headers{",
-      "\tREAD_ONLY_PROPERTY: ${2:}",
-      "})"
-    ],
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=ServerResponse.headers for more information.",
     "description": [
       "N/https Module",
       "ServerResponse.headers\n",
-      "Property Description:\nThe server response headers.\nThis property is read-only.\nFor more information, see HTTPS Header Information.\n",
-      "Type:\nObject\nNote that If multiple values are assigned to one header name, the values are returned as an array. For example:\n",
+      "Property Description:\nThe server response headers.\nFor more information, see HTTPS Header Information.\n",
+      "Type:\nObject (read-only)\nNote that If multiple values are assigned to one header name, the values are returned as an array. For example:\n",
       "Supported Script Types:\nServer scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/https Module\n",
       "Since:\n2015.2\n",
@@ -5725,10 +5714,10 @@
     "prefix": "https.post(options)",
     "body": [
       "${1:https}.post({",
-      "\turl: ${2:string*},",
-      "\tbody: ${3:string | Object*},",
-      "\theaders: ${4:Object},",
-      "\tcredentials: ${5:string[]}",
+      "\tbody: ${2:string | Object*},",
+      "\turl: ${3:string*},",
+      "\tcredentials: ${4:string[]},",
+      "\theaders: ${5:Object}",
       "})"
     ],
     "description": [
@@ -5763,10 +5752,10 @@
     "prefix": "https.put(options)",
     "body": [
       "${1:https}.put({",
-      "\turl: ${2:string*},",
-      "\tbody: ${3:string | Object*},",
-      "\theaders: ${4:Object},",
-      "\tcredentials: ${5:string[]}",
+      "\tbody: ${2:string | Object*},",
+      "\turl: ${3:string*},",
+      "\tcredentials: ${4:string[]},",
+      "\theaders: ${5:Object}",
       "})"
     ],
     "description": [
@@ -5804,8 +5793,8 @@
       "\tmethod: ${2:enum*},",
       "\turl: ${3:string*},",
       "\tbody: ${4:string | Object},",
-      "\theaders: ${5:Object},",
-      "\tcredentials: ${6:string[]}",
+      "\tcredentials: ${5:string[]},",
+      "\theaders: ${6:Object}",
       "})"
     ],
     "description": [
@@ -5826,7 +5815,7 @@
     "description": [
       "N/https Module",
       "https.request.promise()\n",
-      "Method Description:\nSends an HTTP request asynchronously.\nThe parameters and errors thrown for this method are the same as those for https.request(options). For more information on promises, see Promise Object.\n",
+      "Method Description:\nSends an HTTPS request asynchronously.\nThe parameters and errors thrown for this method are the same as those for https.request(options). For more information on promises, see Promise Object.\n",
       "Returns:\nPromise Object\n",
       "Synchronous Version:\nhttps.request(options)\n",
       "Supported Script Types:\nClient scripts\nFor more information, see SuiteScript 2.0 Client Script Type.\n",
@@ -6188,14 +6177,14 @@
     "prefix": "log.audit(options)",
     "body": [
       "${1:log}.audit({",
-      "\ttitle: ${2:string},",
-      "\tdetails: ${3:any*}",
+      "\ttitle: ${2:string*},",
+      "\tdetails: ${3:any}",
       "})"
     ],
     "description": [
       "N/log Module",
       "log.audit()\n",
-      "Method Description:\nLogs an Audit type log message to the Execution Log tab of the script deployment for the current script.\nThis entry will not appear on the Execution Log tab if the Log Level field for the script deployment is set to Error or above.\nUse this method for scripts in production.\n",
+      "Method Description:\nLogs an Audit message.\nAudit messages appear on the Execution Log tab if the Log Level on the script deployment is set to Audit or Debug.\nUse this method for scripts in production.\n",
       "Returns:\nvoid\n",
       "Supported Script Types:\nAll script types\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Governance:\nAmount of logging in any 60 minute period is limited. See N/log Module Guidelines.\n",
@@ -6215,7 +6204,7 @@
     "description": [
       "N/log Module",
       "log.debug()\n",
-      "Method Description:\nLogs a Debug type log message to the Execution Log tab of the script deployment for the current script.\nThis entry does not appear on the Execution Log tab if the Log Level field for the script deployment is set to Audit or above.\nUse this method for scripts in development.\n",
+      "Method Description:\nLogs a Debug message.\nDebug messages appear on the Execution tab only if the Log Level on the script deployment is set to Debug.\nUse this method for scripts in development.\n",
       "Returns:\nvoid\n",
       "Supported Script Types:\nAll script types\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Governance:\nAmount of logging in any 60 minute period is limited. See N/log Module Guidelines.\n",
@@ -6228,14 +6217,14 @@
     "prefix": "log.emergency(options)",
     "body": [
       "${1:log}.emergency({",
-      "\ttitle: ${2:string},",
-      "\tdetails: ${3:any*}",
+      "\ttitle: ${2:string*},",
+      "\tdetails: ${3:any}",
       "})"
     ],
     "description": [
       "N/log Module",
       "log.emergency()\n",
-      "Method Description:\nLogs an Emergency type log message to the Execution Log tab of the script deployment for the current script.\nUse this method for scripts in production.\n",
+      "Method Description:\nLogs an Emergency message.\nEmergency messages appear on the Execution tab only if the Log Level on the script deployment is set to Audit, Debug, Error, or Emergency. In other words, emergency messages always appear.\nUse this method for scripts in production.\n",
       "Returns:\nvoid\n",
       "Supported Script Types:\nAll script types\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Governance:\nAmount of logging in any 60 minute period is limited. See N/log Module Guidelines.\n",
@@ -6248,14 +6237,14 @@
     "prefix": "log.error(options)",
     "body": [
       "${1:log}.error({",
-      "\ttitle: ${2:string},",
-      "\tdetails: ${3:any*}",
+      "\ttitle: ${2:string*},",
+      "\tdetails: ${3:any}",
       "})"
     ],
     "description": [
       "N/log Module",
       "log.error()\n",
-      "Method Description:\nLogs an Error type log message to the Execution Log tab of the script deployment for the current script.\nThis entry will not appear on the Execution Log tab if the Log Level field for the script deployment is set to Emergency or above.\nUse this method for scripts in production.\n",
+      "Method Description:\nLogs an Error message.\nError messages appear on the Execution tab only if the Log Level on the script deployment is set to Audit, Debug, or Error.\nUse this method for scripts in production.\n",
       "Returns:\nvoid\n",
       "Supported Script Types:\nAll script types\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Governance:\nAmount of logging in any 60 minute period is limited. See N/log Module Guidelines.\n",
@@ -7493,7 +7482,7 @@
     "description": [
       "N/query Module",
       "query.Period\n",
-      "Object Description:\nA period of time to use in query conditions.\n",
+      "Object Description:\nA period of time to use in query conditions.\nUse query.createPeriod(options) to create this object. After you create this object, you can use it in the values parameter of Query.createCondition(options) or Component.createCondition(options).\n",
       "Supported Script Types:\nClient and server scripts\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/query Module\n",
       "Methods and Properties:\nPeriod Object Members\n",
@@ -7531,46 +7520,6 @@
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Period.code\n"
     ]
   },
-  "dialog.alert(options)": {
-    "prefix": "dialog.alert(options)",
-    "body": [
-      "${1:dialog}.alert({",
-      "\ttitle: ${2:string},",
-      "\tmessage: ${3:string}",
-      "})"
-    ],
-    "description": [
-      "N/ui/dialog Module",
-      "dialog.alert()\n",
-      "Method Description:\nCreates an Alert dialog with an OK button.\n",
-      "Returns:\nPromise Object. To run a callback function when the OK button is clicked, pass a function to the then portion of the Promise object. When the OK button is clicked, true is passed to the callback. You do not have to utilize the Promise object unless there is an action you want performed after the user clicks the OK button.\n",
-      "Supported Script Types:\nClient scripts\nFor more information, see SuiteScript 2.0 Client Script Type.\n",
-      "Governance:\nNone\n",
-      "Module:\nN/ui/dialog Module\n",
-      "Since:\n2016.1\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=dialog.alert(options)\n"
-    ]
-  },
-  "dialog.confirm(options)": {
-    "prefix": "dialog.confirm(options)",
-    "body": [
-      "${1:dialog}.confirm({",
-      "\ttitle: ${2:string},",
-      "\tmessage: ${3:string}",
-      "})"
-    ],
-    "description": [
-      "N/ui/dialog Module",
-      "dialog.confirm()\n",
-      "Method Description:\nCreates a Confirm dialog with OK and Cancel buttons.\n",
-      "Returns:\nPromise Object. To run a callback function when the OK button is pressed, pass a function to the then portion of the Promise object. The value of the pressed button, where OK is true and Cancel is false, is passed to the callback.\n",
-      "Supported Script Types:\nClient scripts\nFor more information, see SuiteScript 2.0 Client Script Type.\n",
-      "Governance:\nNone\n",
-      "Module:\nN/ui/dialog Module\n",
-      "Since:\n2016.1\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=dialog.confirm(options)\n"
-    ]
-  },
   "Period.type": {
     "prefix": "Period.type",
     "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=Period.type for more information.",
@@ -7584,27 +7533,6 @@
       "Sibling Object Members:\nPeriod Object Members\n",
       "Since:\n2020.1\n",
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Period.type\n"
-    ]
-  },
-  "dialog.create(options)": {
-    "prefix": "dialog.create(options)",
-    "body": [
-      "${1:dialog}.create({",
-      "\tbuttons: ${2:string[]},",
-      "\ttitle: ${3:string},",
-      "\tmessage: ${4:string}",
-      "})"
-    ],
-    "description": [
-      "N/ui/dialog Module",
-      "dialog.create()\n",
-      "Method Description:\nCreates a dialog with specified buttons.\n",
-      "Returns:\nPromise Object. To run a callback function when a button is pressed, pass a function to the then portion of the Promise object. The value of the button pressed is passed to the callback.\n",
-      "Supported Script Types:\nClient scripts\nFor more information, see SuiteScript 2.0 Client Script Type.\n",
-      "Governance:\nNone\n",
-      "Module:\nN/ui/dialog Module\n",
-      "Since:\n2016.1\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=dialog.create(options)\n"
     ]
   },
   "query.Query": {
@@ -7663,34 +7591,6 @@
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Query.autoJoin(options)\n"
     ]
   },
-  "message.Message": {
-    "prefix": "message.Message",
-    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=message.Message for more information.",
-    "description": [
-      "N/ui/message Module",
-      "message.Message\n",
-      "Object Description:\nThe Message object that gets created when calling the create method.\nFor a complete list of this object’s methods, see Message Object Members.\n",
-      "Supported Script Types:\nClient scripts\nFor more information, see SuiteScript 2.0 Client Script Type.\n",
-      "Module:\nN/ui/message Module\n",
-      "Since:\n2016.1\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=message.Message\n"
-    ]
-  },
-  "Message.hide()": {
-    "prefix": "Message.hide()",
-    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=Message.hide() for more information.",
-    "description": [
-      "N/ui/message Module",
-      "Message.hide()\n",
-      "Method Description:\nHides the message.\n",
-      "Returns:\nvoid\n",
-      "Supported Script Types:\nClient scripts\nFor more information, see SuiteScript 2.0 Client Script Type.\n",
-      "Governance:\nNone\n",
-      "Module:\nN/ui/message Module\n",
-      "Since:\n2016.1\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Message.hide()\n"
-    ]
-  },
   "Query.createColumn(options)": {
     "prefix": "Query.createColumn(options)",
     "body": [
@@ -7723,47 +7623,6 @@
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Query.createColumn(options)\n"
     ]
   },
-  "Message.show()": {
-    "prefix": "Message.show()",
-    "body": [
-      "${1:Message}.show(){",
-      "\tduration: ${2:int|string}",
-      "})"
-    ],
-    "description": [
-      "N/ui/message Module",
-      "Message.show()\n",
-      "Method Description:\nShows the message.\n",
-      "Returns:\nvoid\n",
-      "Supported Script Types:\nClient scripts\nFor more information, see SuiteScript 2.0 Client Script Type.\n",
-      "Governance:\nNone\n",
-      "Module:\nN/ui/message Module\n",
-      "Since:\n2016.1\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Message.show()\n"
-    ]
-  },
-  "message.create(options)": {
-    "prefix": "message.create(options)",
-    "body": [
-      "${1:message}.create({",
-      "\ttype: ${2:message.Type*},",
-      "\ttitle: ${3:string},",
-      "\tmessage: ${4:string},",
-      "\tduration: ${5:int|string}",
-      "})"
-    ],
-    "description": [
-      "N/ui/message Module",
-      "message.create()\n",
-      "Method Description:\nCreates a message that can be displayed or hidden near the top of the page.\n",
-      "Returns:\nmessage.Message.\n",
-      "Supported Script Types:\nClient scripts\nFor more information, see SuiteScript 2.0 Client Script Type.\n",
-      "Governance:\nNone\n",
-      "Module:\nN/ui/message Module\n",
-      "Since:\n2016.1\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=message.create(options)\n"
-    ]
-  },
   "Query.createCondition(options)": {
     "prefix": "Query.createCondition(options)",
     "body": [
@@ -7788,19 +7647,6 @@
       "Sibling Object Members:\nQuery Object Members\n",
       "Since:\n2018.1\n",
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Query.createCondition(options)\n"
-    ]
-  },
-  "message.Type": {
-    "prefix": "message.Type",
-    "body": "message.Type.${1|CONFIRMATION,INFORMATION,WARNING,ERROR|}",
-    "description": [
-      "N/ui/message Module",
-      "message.Type\n",
-      "Enum Description:\nIndicates the type of message to display, which specifies the background color of the message and other message indicators.\nJavaScript does not include an enumeration type. The SuiteScript 2.0 documentation uses the term enumeration (or enum) to describe a plain JavaScript object with a flat, map-like structure. In this object, each key points to a read-only string value.\n",
-      "Supported Script Types:\nClient scripts\nFor more information, see SuiteScript 2.0 Client Script Type.\n",
-      "Module:\nN/ui/message Module\n",
-      "Since:\n2016.1\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=message.Type\n"
     ]
   },
   "Query.createSort(options)": {
@@ -7828,19 +7674,6 @@
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Query.createSort(options)\n"
     ]
   },
-  "serverWidget.Assistant": {
-    "prefix": "serverWidget.Assistant",
-    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=serverWidget.Assistant for more information.",
-    "description": [
-      "N/ui/serverWidget Module",
-      "serverWidget.Assistant\n",
-      "Object Description:\nA scriptable, multi-step NetSuite assistant. An assistant contains a series of step that a user must complete to accomplish a larger goal. An assistant can be sequential, or non-sequential and include optional steps. Each page of the assistant is defined by a step.\nAll data and states for an assistant are tracked automatically throughout the user's session until completion of the assistant.\nYou can create a new assistant with the serverWidget.createAssistant(options) method.\nAfter you create an Assistant object, you can:\nBuild and run an assistant in your NetSuite account.\nAdd a variety of scriptable elements to the assistant including fields, steps, buttons, tabs, and sublists.\nFor a complete list of this object’s methods and properties, see Assistant Object Members.\nThe assistant cannot be used on externally available Suitelets.\n",
-      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
-      "Module:\nN/ui/serverWidget Module\n",
-      "Since:\n2015.2\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=serverWidget.Assistant\n"
-    ]
-  },
   "Query.join(options)": {
     "prefix": "Query.join(options)",
     "body": [
@@ -7860,29 +7693,6 @@
       "Sibling Object Members:\nQuery Object Members\n",
       "Since:\n2018.1\n",
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Query.join(options)\n"
-    ]
-  },
-  "Assistant.addField(options)": {
-    "prefix": "Assistant.addField(options)",
-    "body": [
-      "${1:Assistant}.addField({",
-      "\tid: ${2:string*},",
-      "\tlabel: ${3:string*},",
-      "\ttype: ${4:string*},",
-      "\tsource: ${5:string},",
-      "\tcontainer: ${6:string}",
-      "})"
-    ],
-    "description": [
-      "N/ui/serverWidget Module",
-      "Assistant.addField()\n",
-      "Method Description:\nAdds a field to an assistant. Use fields to record or display information specific to your needs.\n",
-      "Returns:\nserverWidget.Field object\n",
-      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
-      "Governance:\nNone\n",
-      "Module:\nN/ui/serverWidget Module\n",
-      "Since:\n2015.2\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.addField(options)\n"
     ]
   },
   "Query.joinFrom(options)": {
@@ -7905,26 +7715,6 @@
       "Sibling Object Members:\nQuery Object Members\n",
       "Since:\n2018.2\n",
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Query.joinFrom(options)\n"
-    ]
-  },
-  "Assistant.addFieldGroup(options)": {
-    "prefix": "Assistant.addFieldGroup(options)",
-    "body": [
-      "${1:Assistant}.addFieldGroup({",
-      "\tid: ${2:string*},",
-      "\tlabel: ${3:string*}",
-      "})"
-    ],
-    "description": [
-      "N/ui/serverWidget Module",
-      "Assistant.addFieldGroup()\n",
-      "Method Description:\nAdds a field group to the assistant. A field group is a collection of fields that can be displayed in a one or two column format. Assign a field to a field group in order to label, hide or collapse a group of fields.\nBy default, the field group is collapsible and appears expanded on the assistant page. To change this behavior, set the FieldGroup.isCollapsed and FieldGroup.isCollapsible properties.\n",
-      "Returns:\nserverWidget.FieldGroup object\n",
-      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
-      "Governance:\nNone\n",
-      "Module:\nN/ui/serverWidget Module\n",
-      "Since:\n2015.2\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.addFieldGroup(options)\n"
     ]
   },
   "Query.joinTo(options)": {
@@ -7966,26 +7756,6 @@
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Query.run()\n"
     ]
   },
-  "Assistant.addStep(options)": {
-    "prefix": "Assistant.addStep(options)",
-    "body": [
-      "${1:Assistant}.addStep({",
-      "\tid: ${2:string*},",
-      "\tlabel: ${3:string*}",
-      "})"
-    ],
-    "description": [
-      "N/ui/serverWidget Module",
-      "Assistant.addStep()\n",
-      "Method Description:\nAdds a step to an assistant. Steps define each page of the assistant.\nUse Assistant.isNotOrdered to control if the steps must be completed sequentially or in no specific order.\nIf you want to create help text for the step, you can use AssistantStep.helpText on the object returned.\n",
-      "Returns:\nserverWidget.AssistantStep object\n",
-      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
-      "Governance:\nNone\n",
-      "Module:\nN/ui/serverWidget Module\n",
-      "Since:\n2015.2\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.addStep(options)\n"
-    ]
-  },
   "Query.run.promise()": {
     "prefix": "Query.run.promise()",
     "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=Query.run.promise() for more information.",
@@ -8024,27 +7794,6 @@
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Query.runPaged()\n"
     ]
   },
-  "Assistant.addSublist(options)": {
-    "prefix": "Assistant.addSublist(options)",
-    "body": [
-      "${1:Assistant}.addSublist({",
-      "\tid: ${2:string*},",
-      "\tlabel: ${3:string*},",
-      "\ttype: ${4:string*}",
-      "})"
-    ],
-    "description": [
-      "N/ui/serverWidget Module",
-      "Assistant.addSublist()\n",
-      "Method Description:\nAdds a sublist to an assistant.\nOnly inline editor sublists are added. Other sublist types are not supported.\n",
-      "Returns:\nserverWidget.Sublist object\n",
-      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
-      "Governance:\nNone\n",
-      "Module:\nN/ui/serverWidget Module\n",
-      "Since:\n2015.2\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.addSublist(options)\n"
-    ]
-  },
   "Query.runPaged.promise()": {
     "prefix": "Query.runPaged.promise()",
     "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=Query.runPaged.promise() for more information.",
@@ -8060,25 +7809,6 @@
       "Sibling Object Members:\nQuery Object Members\n",
       "Since:\n2018.1\n",
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Query.runPaged.promise()\n"
-    ]
-  },
-  "Assistant.getField(options)": {
-    "prefix": "Assistant.getField(options)",
-    "body": [
-      "${1:Assistant}.getField({",
-      "\tid: ${2:string*}",
-      "})"
-    ],
-    "description": [
-      "N/ui/serverWidget Module",
-      "Assistant.getField()\n",
-      "Method Description:\nReturns a field object on an assistant page.\n",
-      "Returns:\nserverWidget.Field\n",
-      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
-      "Governance:\nNone\n",
-      "Module:\nN/ui/serverWidget Module\n",
-      "Since:\n2015.2\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.getField(options)\n"
     ]
   },
   "Query.not()": {
@@ -8102,25 +7832,6 @@
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Query.not()\n"
     ]
   },
-  "Assistant.getFieldGroup(options)": {
-    "prefix": "Assistant.getFieldGroup(options)",
-    "body": [
-      "${1:Assistant}.getFieldGroup({",
-      "\tid: ${2:string*}",
-      "})"
-    ],
-    "description": [
-      "N/ui/serverWidget Module",
-      "Assistant.getFieldGroup()\n",
-      "Method Description:\nReturns a field group on an assistant page.\n",
-      "Returns:\nserverWidget.FieldGroup object\n",
-      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
-      "Governance:\nNone\n",
-      "Module:\nN/ui/serverWidget Module\n",
-      "Since:\n2015.2\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.getFieldGroup(options)\n"
-    ]
-  },
   "Query.or()": {
     "prefix": "Query.or()",
     "body": [
@@ -8142,21 +7853,6 @@
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Query.or()\n"
     ]
   },
-  "Assistant.getFieldGroupIds()": {
-    "prefix": "Assistant.getFieldGroupIds()",
-    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.getFieldGroupIds() for more information.",
-    "description": [
-      "N/ui/serverWidget Module",
-      "Assistant.getFieldGroupIds()\n",
-      "Method Description:\nRetrieves all the internal IDs for field groups in an assistant.\n",
-      "Returns:\nstring[]\n",
-      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
-      "Governance:\nNone\n",
-      "Module:\nN/ui/serverWidget Module\n",
-      "Since:\n2015.2\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.getFieldGroupIds()\n"
-    ]
-  },
   "Query.toSuiteQL()": {
     "prefix": "Query.toSuiteQL()",
     "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=Query.toSuiteQL() for more information.",
@@ -8172,40 +7868,6 @@
       "Sibling Object Members:\nQuery Object Members\n",
       "Since:\n2020.1\n",
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Query.toSuiteQL()\n"
-    ]
-  },
-  "Assistant.getFieldIds()": {
-    "prefix": "Assistant.getFieldIds()",
-    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.getFieldIds() for more information.",
-    "description": [
-      "N/ui/serverWidget Module",
-      "Assistant.getFieldIds()\n",
-      "Method Description:\nGets all the internal IDs for fields in an assistant.\n",
-      "Returns:\nstring[]\n",
-      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
-      "Governance:\nNone\n",
-      "Module:\nN/ui/serverWidget Module\n",
-      "Since:\n2015.2\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.getFieldIds()\n"
-    ]
-  },
-  "Assistant.getFieldIdsByFieldGroup(fieldGroup)": {
-    "prefix": "Assistant.getFieldIdsByFieldGroup(fieldGroup)",
-    "body": [
-      "${1:Assistant}.getFieldIdsByFieldGroup(fieldGroup){",
-      "\tfieldGroup: ${2:string*}",
-      "})"
-    ],
-    "description": [
-      "N/ui/serverWidget Module",
-      "Assistant.getFieldIdsByFieldGroup(fieldGroup)\n",
-      "Method Description:\nGets all field IDs in the assistant field group.\n",
-      "Returns:\nstring[]\n",
-      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
-      "Governance:\nNone\n",
-      "Module:\nN/ui/serverWidget Module\n",
-      "Since:\n2016.1\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.getFieldIdsByFieldGroup(fieldGroup)\n"
     ]
   },
   "Query.child": {
@@ -9044,21 +8706,6 @@
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=query.PeriodCode\n"
     ]
   },
-  "Assistant.getLastAction()": {
-    "prefix": "Assistant.getLastAction()",
-    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.getLastAction() for more information.",
-    "description": [
-      "N/ui/serverWidget Module",
-      "Assistant.getLastAction()\n",
-      "Method Description:\nGets the last action taken by the user.\nTo identify the step that the last action came from, use Assistant.getLastStep().\n",
-      "Returns:\nstring\n",
-      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
-      "Governance:\nNone\n",
-      "Module:\nN/ui/serverWidget Module\n",
-      "Since:\n2015.2\n",
-      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.getLastAction()\n"
-    ]
-  },
   "query.PeriodType": {
     "prefix": "query.PeriodType",
     "body": "query.PeriodType.${1|END,START|}",
@@ -9113,7 +8760,7 @@
   },
   "query.Type": {
     "prefix": "query.Type",
-    "body": "query.Type.${1|ACCOUNT,ACCOUNTING_BOOK,ACCOUNTING_CONTEXT,ACCOUNTING_PERIOD,ALLOCATION_METHOD,AMORTIZATION_SCHEDULE,AMORTIZATION_TEMPLATE,AUTHORIZATION_CONSENT,BILLING_CLASS,BILLING_RATE_CARD,BILLING_SCHEDULE,BILL_OF_DISTRIBUTION,BILL_RUN,BILL_RUN_SCHEDULE,BIN,BOM,BOM_REVISION,BOM_REVISION_COMPONENT,BUDGETCATEGORY,BUDGETS,BUDGET_EXCHANGE_RATE,BULK_PROC_SUBMISSION,BUNDLE_INSTALLATION_SCRIPT,BUNDLE_INSTALLATION_SCRIPT_DEPLOYMENT,BUSINESS_EVENTS_PROCESSING_HISTORY,CALENDAR_EVENT,CAMPAIGN_AUDIENCE,CAMPAIGN_CATEGORY,CAMPAIGN_CHANNEL,CAMPAIGN_EMAIL_ADDRESS,CAMPAIGN_EVENT,CAMPAIGN_FAMILY,CAMPAIGN_OFFER,CAMPAIGN_RESPONSE,CAMPAIGN_SEARCH_ENGINE,CAMPAIGN_SUBSCRIPTION,CAMPAIGN_TEMPLATE,CAMPAIGN_VERTICAL,CARDHOLDER_AUTHENTICATION,CARDHOLDER_AUTHENTICATION_EVENT,CATEGORY1099MISC,CHARGE,CHARGE_RULE,CHARGE_RUN,CHARGE_TYPE,CLASSIFICATION,CLIENT_SCRIPT,CLIENT_SCRIPT_DEPLOYMENT,COMPETITOR,CONSOLIDATED_EXCHANGE_RATE,CONSOLIDATED_RATE_ADJUSTOR_PLUGIN,CONTACT,CONTACT_CATEGORY,CONTACT_ROLE,CONTACT_SUBSIDIARY_RELATIONSHIP,COST_CATEGORY,COUPON_CODE,CURRENCY,CURRENCY_RATE,CUSTOMER,CUSTOMER_CATEGORY,CUSTOMER_MESSAGE,CUSTOMER_SEGMENT,CUSTOMER_SUBSIDIARY_RELATIONSHIP,CUSTOM_FIELD,CUSTOM_GL_PLUGIN,CUSTOM_LIST,CUSTOM_RECORD_TYPE,CUSTOM_SEGMENT,CUSTOM_TRANSACTION_TYPE,DELETED_RECORD,DEPARTMENT,DEVICE_ID,DISTRIBUTION_CATEGORY,DISTRIBUTION_NETWORK,DOMAIN,EMAIL_CAPTURE_PLUGIN,EMAIL_TEMPLATE,EMPLOYEE,EMPLOYEE_LIST,EMPLOYEE_STATUS,EMPLOYEE_SUBSIDIARY_RELATIONSHIP,EMPLOYEE_TYPE,ENTITY,ENTITY_GROUP,ENTITY_SUBSIDIARY_RELATIONSHIP,EXPENSE_CATEGORY,FAX_TEMPLATE,FILE,FISCAL_CALENDAR,FORECAST,FULFILLMENT_EXCEPTION_REASON,FULFILLMENT_REQUEST,GATEWAY_NOTIFICATION,GENERAL_ALLOCATION_SCHEDULE,GENERAL_TOKEN,GENERIC_RESOURCE,GENERIC_RESOURCE_SUBSIDIARY_RELATIONSHIP,GIFT_CERTIFICATE,GLOBAL_ACCOUNT_MAPPING,GLOBAL_INVENTORY_RELATIONSHIP,GL_LINES_AUDIT_LOG,GL_LINES_PLUGIN_REVISION,G_L_NUMBERING_SEQUENCE,INBOUND_SHIPMENT,INCOTERM,INVENTORY_COST_TEMPLATE,INVENTORY_NUMBER,INVENTORY_STATUS,INVT_ITEM_PRICE_HISTORY,ISSUE,ITEM,ITEM_ACCOUNT_MAPPING,ITEM_COLLECTION,ITEM_DEMAND_PLAN,ITEM_LOCATION_CONFIGURATION,ITEM_SEGMENT_INCLUDING_SYNTHETIC,ITEM_SUPPLY_PLAN,I_P_RESTRICTIONS,JOB,JOB_RESOURCE_ROLE,JOB_STATUS,JOB_TYPE,KNOWLEDGE_BASE,LOCATION,LOCATION_COSTING_GROUP,LOGIN_AUDIT,MAIL_TEMPLATE,MANUFACTURING_COST_TEMPLATE,MANUFACTURING_ROUTING,MANUFACTURING_TRANSACTION,MAP_REDUCE_SCRIPT,MAP_REDUCE_SCRIPT_DEPLOYMENT,MASS_UPDATE_SCRIPT,MASS_UPDATE_SCRIPT_DEPLOYMENT,MEDIA_ITEM_FOLDER,MEM_DOC,MEM_DOC_TRANSACTION_TEMPLATE,MERCHANDISE_HIERARCHY_LEVEL,MERCHANDISE_HIERARCHY_NODE,MERCHANDISE_HIERARCHY_VERSION,MESSAGE,MFG_PLANNED_TIME,NEXUS,NOTE,ONLINE_CASE_FORM,ONLINE_FORM_TEMPLATE,ONLINE_LEAD_FORM,ORDER_ALLOCATION_STRATEGY,OTHER_NAME,OTHER_NAME_CATEGORY,OTHER_NAME_SUBSIDIARY_RELATIONSHIP,OUTBOUND_REQUEST,O_AUTH_TOKEN,PARTNER,PARTNER_SUBSIDIARY_RELATIONSHIP,PAYCHECK,PAYMENT_CARD_SEARCH_RECORD,PAYMENT_CARD_TOKEN,PAYMENT_EVENT,PAYMENT_GATEWAY_PLUGIN,PAYMENT_INSTRUMENT,PAYMENT_METHOD,PAYMENT_PROCESSING_PROFILE,PAYMENT_RESULT_PREVIEW,PAYROLL_BATCH,PAYROLL_ITEM,PDF_TEMPLATE,PHONE_CALL,PLANNED_STANDARD_COST,PLATFORM_EXTENSION_PLUGIN,PLUG_IN_TYPE,PLUG_IN_TYPE_IMPL,PORTLET,PORTLET_DEPLOYMENT,PREDICTED_RISK_TRAIN_EVAL_HISTORY,PRICE_LEVEL,PRICING,PRICING_GROUP,PROJECT_SUBSIDIARY_RELATIONSHIP,PROJECT_TASK,PROJECT_TEMPLATE,PROJECT_TEMPLATE_SUBSIDIARY_RELATIONSHIP,PROMOTIONS_PLUGIN,PROMOTION_CODE,PUBLISHED_SAVED_SEARCH,QUANTITY_PRICING_SCHEDULE,QUOTA,RECENT_RECORD,REDIRECT,RESOURCE_GROUP,RESTLET,RESTLET_DEPLOYMENT,REV_REC_SCHEDULE,REV_REC_TEMPLATE,ROLE,SALES_INVOICED,SALES_ORDERED,SALES_TAX_ITEM,SCHEDULED_SCRIPT,SCHEDULED_SCRIPT_DEPLOYMENT,SCHEDULED_SCRIPT_INSTANCE,SCRIPT,SCRIPT_DEPLOYMENT,SCRIPT_NOTE,SCRIPT_RECORD_TYPE,SEARCH_CAMPAIGN,SENT_EMAIL,SHIPPING_PACKAGE,SHIPPING_PARTNERS_PLUGIN,SHIPPING_PARTNER_REGISTRATION,SHIP_ITEM,SHOPPING_CART,SITE_CATEGORY,SOLUTION,STANDARD_COST_VERSION,STATISTICAL_JOURNAL_ENTRY,STATISTICAL_SCHEDULE,STORE_TAB,SUBLIST,SUBSIDIARY,SUBSIDIARY_SETTINGS,SUITELET,SUITELET_DEPLOYMENT,SUITE_SCRIPT_DETAIL,SUPPLY_CHAIN_SNAPSHOT,SUPPLY_CHAIN_SNAPSHOT_SIMULATION,SUPPORT_CASE,SYSTEM_EMAIL_TEMPLATE,SYSTEM_NOTE,SYSTEM_NOTE2,SYSTEM_NOTE_FIELD,TASK,TASK_ITEM_STATUS,TAX_CALCULATION_PLUGIN,TAX_TYPE,TERM,TEST_PLUGIN,TIME_BILL,TOPIC,TRANSACTION,TRANSACTION_DELETION_REASON,TRANSACTION_HISTORY,TRANSACTION_NUMBERING_AUDIT_LOG,UMD_FIELD,UNDELIVERED_EMAIL,UNITS_TYPE,USER_EVENT_SCRIPT,USER_EVENT_SCRIPT_DEPLOYMENT,USER_O_AUTH_TOKEN,USRSAVEDSEARCH,USR_AUDIT_LOG,USR_EXECUTION_LOG,VENDOR,VENDOR_CATEGORY,VENDOR_SUBSIDIARY_RELATIONSHIP,WEBAPP,WEB_SITE,WORKFLOW_ACTION_SCRIPT,WORKFLOW_ACTION_SCRIPT_DEPLOYMENT,WORKPLACE,WORK_CALENDAR,WBS|}",
+    "body": "query.Type.${1|ACCOUNT,ACCOUNTING_BOOK,ACCOUNTING_CONTEXT,ACCOUNTING_PERIOD,ALLOCATION_METHOD,AMORTIZATION_SCHEDULE,AMORTIZATION_TEMPLATE,AUTHORIZATION_CONSENT,BILLING_CLASS,BILLING_RATE_CARD,BILLING_SCHEDULE,BILL_OF_DISTRIBUTION,BILL_RUN,BILL_RUN_SCHEDULE,BIN,BOM,BOM_REVISION,BOM_REVISION_COMPONENT,BUDGETCATEGORY,BUDGETS,BUDGET_EXCHANGE_RATE,BULK_PROC_SUBMISSION,BUNDLE_INSTALLATION_SCRIPT,BUNDLE_INSTALLATION_SCRIPT_DEPLOYMENT,BUSINESS_EVENTS_PROCESSING_HISTORY,CALENDAR_EVENT,CAMPAIGN_AUDIENCE,CAMPAIGN_CATEGORY,CAMPAIGN_CHANNEL,CAMPAIGN_EMAIL_ADDRESS,CAMPAIGN_EVENT,CAMPAIGN_FAMILY,CAMPAIGN_OFFER,CAMPAIGN_RESPONSE,CAMPAIGN_SEARCH_ENGINE,CAMPAIGN_SUBSCRIPTION,CAMPAIGN_TEMPLATE,CAMPAIGN_VERTICAL,CARDHOLDER_AUTHENTICATION,CARDHOLDER_AUTHENTICATION_EVENT,CATEGORY1099MISC,CHARGE,CHARGE_RULE,CHARGE_RUN,CHARGE_TYPE,CLASSIFICATION,CLIENT_SCRIPT,CLIENT_SCRIPT_DEPLOYMENT,COMPETITOR,CONSOLIDATED_EXCHANGE_RATE,CONSOLIDATED_RATE_ADJUSTOR_PLUGIN,CONTACT,CONTACT_CATEGORY,CONTACT_ROLE,CONTACT_SUBSIDIARY_RELATIONSHIP,COST_CATEGORY,COUPON_CODE,CURRENCY,CURRENCY_RATE,CUSTOMER,CUSTOMER_CATEGORY,CUSTOMER_MESSAGE,CUSTOMER_SEGMENT,CUSTOMER_SUBSIDIARY_RELATIONSHIP,CUSTOM_FIELD,CUSTOM_GL_PLUGIN,CUSTOM_LIST,CUSTOM_RECORD_TYPE,CUSTOM_SEGMENT,CUSTOM_TRANSACTION_TYPE,DELETED_RECORD,DEPARTMENT,DEVICE_ID,DISTRIBUTION_CATEGORY,DISTRIBUTION_NETWORK,DOMAIN,EMAIL_CAPTURE_PLUGIN,EMAIL_TEMPLATE,EMPLOYEE,EMPLOYEE_LIST,EMPLOYEE_STATUS,EMPLOYEE_SUBSIDIARY_RELATIONSHIP,EMPLOYEE_TYPE,ENTITY,ENTITY_GROUP,ENTITY_SUBSIDIARY_RELATIONSHIP,EXPENSE_CATEGORY,FAX_TEMPLATE,FILE,FISCAL_CALENDAR,FORECAST,FULFILLMENT_EXCEPTION_REASON,FULFILLMENT_REQUEST,GATEWAY_NOTIFICATION,GENERAL_ALLOCATION_SCHEDULE,GENERAL_TOKEN,GENERIC_RESOURCE,GENERIC_RESOURCE_SUBSIDIARY_RELATIONSHIP,GIFT_CERTIFICATE,GLOBAL_ACCOUNT_MAPPING,GLOBAL_INVENTORY_RELATIONSHIP,GL_LINES_AUDIT_LOG,GL_LINES_PLUGIN_REVISION,G_L_NUMBERING_SEQUENCE,INBOUND_SHIPMENT,INCOTERM,INVENTORY_COST_TEMPLATE,INVENTORY_NUMBER,INVENTORY_STATUS,INVT_ITEM_PRICE_HISTORY,ISSUE,ITEM,ITEM_ACCOUNT_MAPPING,ITEM_COLLECTION,ITEM_DEMAND_PLAN,ITEM_LOCATION_CONFIGURATION,ITEM_SEGMENT_INCLUDING_SYNTHETIC,ITEM_SUPPLY_PLAN,I_P_RESTRICTIONS,JOB,JOB_RESOURCE_ROLE,JOB_STATUS,JOB_TYPE,KNOWLEDGE_BASE,LOCATION,LOCATION_COSTING_GROUP,LOGIN_AUDIT,MAIL_TEMPLATE,MANUFACTURING_COST_TEMPLATE,MANUFACTURING_ROUTING,MANUFACTURING_TRANSACTION,MAP_REDUCE_SCRIPT,MAP_REDUCE_SCRIPT_DEPLOYMENT,MASS_UPDATE_SCRIPT,MASS_UPDATE_SCRIPT_DEPLOYMENT,MEDIA_ITEM_FOLDER,MEM_DOC,MEM_DOC_TRANSACTION_TEMPLATE,MERCHANDISE_HIERARCHY_LEVEL,MERCHANDISE_HIERARCHY_NODE,MERCHANDISE_HIERARCHY_VERSION,MESSAGE,MFG_PLANNED_TIME,NEXUS,NOTE,ONLINE_CASE_FORM,ONLINE_FORM_TEMPLATE,ONLINE_LEAD_FORM,ORDER_ALLOCATION_STRATEGY,OTHER_NAME,OTHER_NAME_CATEGORY,OTHER_NAME_SUBSIDIARY_RELATIONSHIP,OUTBOUND_REQUEST,O_AUTH_TOKEN,PARTNER,PARTNER_SUBSIDIARY_RELATIONSHIP,PAYCHECK,PAYMENT_CARD_SEARCH_RECORD,PAYMENT_CARD_TOKEN,PAYMENT_EVENT,PAYMENT_GATEWAY_PLUGIN,PAYMENT_INSTRUMENT,PAYMENT_METHOD,PAYMENT_PROCESSING_PROFILE,PAYMENT_RESULT_PREVIEW,PAYROLL_BATCH,PAYROLL_ITEM,PDF_TEMPLATE,PHONE_CALL,PLANNED_STANDARD_COST,PLATFORM_EXTENSION_PLUGIN,PLUG_IN_TYPE,PLUG_IN_TYPE_IMPL,PORTLET,PORTLET_DEPLOYMENT,PREDICTED_RISK_TRAIN_EVAL_HISTORY,PRICE_LEVEL,PRICING,PRICING_GROUP,PROJECT_SUBSIDIARY_RELATIONSHIP,PROJECT_TASK,PROJECT_TEMPLATE,PROJECT_TEMPLATE_SUBSIDIARY_RELATIONSHIP,PROMOTIONS_PLUGIN,PROMOTION_CODE,PUBLISHED_SAVED_SEARCH,QUANTITY_PRICING_SCHEDULE,QUOTA,RECENT_RECORD,REDIRECT,RESOURCE_GROUP,RESTLET,RESTLET_DEPLOYMENT,REV_REC_SCHEDULE,REV_REC_TEMPLATE,ROLE,SALES_INVOICED,SALES_ORDERED,SALES_TAX_ITEM,SCHEDULED_SCRIPT,SCHEDULED_SCRIPT_DEPLOYMENT,SCHEDULED_SCRIPT_INSTANCE,SCRIPT,SCRIPT_CUSTOM_RECORD_TYPE,SCRIPT_DEPLOYMENT,SCRIPT_NOTE,SCRIPT_RECORD_TYPE,SEARCH_CAMPAIGN,SENT_EMAIL,SHIPPING_PACKAGE,SHIPPING_PARTNERS_PLUGIN,SHIPPING_PARTNER_REGISTRATION,SHIP_ITEM,SHOPPING_CART,SITE_CATEGORY,SOLUTION,STANDARD_COST_VERSION,STATISTICAL_JOURNAL_ENTRY,STATISTICAL_SCHEDULE,STORE_TAB,SUBLIST,SUBSIDIARY,SUBSIDIARY_SETTINGS,SUITELET,SUITELET_DEPLOYMENT,SUITE_SCRIPT_DETAIL,SUPPLY_CHAIN_SNAPSHOT,SUPPLY_CHAIN_SNAPSHOT_SIMULATION,SUPPORT_CASE,SYSTEM_EMAIL_TEMPLATE,SYSTEM_NOTE,SYSTEM_NOTE2,SYSTEM_NOTE_FIELD,TASK,TASK_ITEM_STATUS,TAX_CALCULATION_PLUGIN,TAX_TYPE,TERM,TEST_PLUGIN,TIME_BILL,TOPIC,TRANSACTION,TRANSACTION_DELETION_REASON,TRANSACTION_HISTORY,TRANSACTION_NUMBERING_AUDIT_LOG,UMD_FIELD,UNDELIVERED_EMAIL,UNITS_TYPE,USER_EVENT_SCRIPT,USER_EVENT_SCRIPT_DEPLOYMENT,USER_O_AUTH_TOKEN,USRSAVEDSEARCH,USR_AUDIT_LOG,USR_EXECUTION_LOG,VENDOR,VENDOR_CATEGORY,VENDOR_SUBSIDIARY_RELATIONSHIP,WEBAPP,WEB_SITE,WORKFLOW_ACTION_SCRIPT,WORKFLOW_ACTION_SCRIPT_DEPLOYMENT,WORKPLACE,WORK_CALENDAR,WBS|}",
     "description": [
       "N/query Module",
       "query.Type\n",
@@ -13337,7 +12984,7 @@
     "description": [
       "N/search Module",
       "PagedData.pageRanges\n",
-      "Property Description:\nThe collection of PageRange objects that divide the entire result set into smaller groups.\nIncludes page range information with the key and label for rendering.\n",
+      "Property Description:\nThe collection of search.PageRange objects that divide the entire result set into smaller groups.\nThis property includes page range information with the key and label for rendering. Page range indexes start at 0.\n",
       "Type:\nsearch.PageRange[]\nThis property is read-only.\n",
       "Supported Script Types:\nAll script types\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/search Module\n",
@@ -13406,7 +13053,7 @@
     "description": [
       "N/search Module",
       "PageRange.index\n",
-      "Property Description:\nThe index of the pageRange\n",
+      "Property Description:\nThe index of the page range.\nPage range indexes start at 0.\n",
       "Type:\nnumber\nThis property is read-only.\n",
       "Supported Script Types:\nAll script types\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Module:\nN/search Module\n",
@@ -16374,6 +16021,348 @@
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=translation.Locale\n"
     ]
   },
+  "dialog.alert(options)": {
+    "prefix": "dialog.alert(options)",
+    "body": [
+      "${1:dialog}.alert({",
+      "\ttitle: ${2:string},",
+      "\tmessage: ${3:string}",
+      "})"
+    ],
+    "description": [
+      "N/ui/dialog Module",
+      "dialog.alert()\n",
+      "Method Description:\nCreates an Alert dialog with an OK button.\n",
+      "Returns:\nPromise Object. To run a callback function when the OK button is clicked, pass a function to the then portion of the Promise object. When the OK button is clicked, true is passed to the callback. You do not have to utilize the Promise object unless there is an action you want performed after the user clicks the OK button.\n",
+      "Supported Script Types:\nClient scripts\nFor more information, see SuiteScript 2.0 Client Script Type.\n",
+      "Governance:\nNone\n",
+      "Module:\nN/ui/dialog Module\n",
+      "Since:\n2016.1\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=dialog.alert(options)\n"
+    ]
+  },
+  "dialog.confirm(options)": {
+    "prefix": "dialog.confirm(options)",
+    "body": [
+      "${1:dialog}.confirm({",
+      "\ttitle: ${2:string},",
+      "\tmessage: ${3:string}",
+      "})"
+    ],
+    "description": [
+      "N/ui/dialog Module",
+      "dialog.confirm()\n",
+      "Method Description:\nCreates a Confirm dialog with OK and Cancel buttons.\n",
+      "Returns:\nPromise Object. To run a callback function when the OK button is pressed, pass a function to the then portion of the Promise object. The value of the pressed button, where OK is true and Cancel is false, is passed to the callback.\n",
+      "Supported Script Types:\nClient scripts\nFor more information, see SuiteScript 2.0 Client Script Type.\n",
+      "Governance:\nNone\n",
+      "Module:\nN/ui/dialog Module\n",
+      "Since:\n2016.1\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=dialog.confirm(options)\n"
+    ]
+  },
+  "dialog.create(options)": {
+    "prefix": "dialog.create(options)",
+    "body": [
+      "${1:dialog}.create({",
+      "\tbuttons: ${2:string[]},",
+      "\ttitle: ${3:string},",
+      "\tmessage: ${4:string}",
+      "})"
+    ],
+    "description": [
+      "N/ui/dialog Module",
+      "dialog.create()\n",
+      "Method Description:\nCreates a dialog with specified buttons.\n",
+      "Returns:\nPromise Object. To run a callback function when a button is pressed, pass a function to the then portion of the Promise object. The value of the button pressed is passed to the callback.\n",
+      "Supported Script Types:\nClient scripts\nFor more information, see SuiteScript 2.0 Client Script Type.\n",
+      "Governance:\nNone\n",
+      "Module:\nN/ui/dialog Module\n",
+      "Since:\n2016.1\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=dialog.create(options)\n"
+    ]
+  },
+  "message.Message": {
+    "prefix": "message.Message",
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=message.Message for more information.",
+    "description": [
+      "N/ui/message Module",
+      "message.Message\n",
+      "Object Description:\nThe Message object that gets created when calling the create method.\nFor a complete list of this object’s methods, see Message Object Members.\n",
+      "Supported Script Types:\nClient scripts\nFor more information, see SuiteScript 2.0 Client Script Type.\n",
+      "Module:\nN/ui/message Module\n",
+      "Since:\n2016.1\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=message.Message\n"
+    ]
+  },
+  "Message.hide()": {
+    "prefix": "Message.hide()",
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=Message.hide() for more information.",
+    "description": [
+      "N/ui/message Module",
+      "Message.hide()\n",
+      "Method Description:\nHides the message.\n",
+      "Returns:\nvoid\n",
+      "Supported Script Types:\nClient scripts\nFor more information, see SuiteScript 2.0 Client Script Type.\n",
+      "Governance:\nNone\n",
+      "Module:\nN/ui/message Module\n",
+      "Since:\n2016.1\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Message.hide()\n"
+    ]
+  },
+  "Message.show()": {
+    "prefix": "Message.show()",
+    "body": [
+      "${1:Message}.show(){",
+      "\tduration: ${2:int|string}",
+      "})"
+    ],
+    "description": [
+      "N/ui/message Module",
+      "Message.show()\n",
+      "Method Description:\nShows the message.\n",
+      "Returns:\nvoid\n",
+      "Supported Script Types:\nClient scripts\nFor more information, see SuiteScript 2.0 Client Script Type.\n",
+      "Governance:\nNone\n",
+      "Module:\nN/ui/message Module\n",
+      "Since:\n2016.1\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Message.show()\n"
+    ]
+  },
+  "message.create(options)": {
+    "prefix": "message.create(options)",
+    "body": [
+      "${1:message}.create({",
+      "\ttype: ${2:message.Type*},",
+      "\ttitle: ${3:string},",
+      "\tmessage: ${4:string},",
+      "\tduration: ${5:int|string}",
+      "})"
+    ],
+    "description": [
+      "N/ui/message Module",
+      "message.create()\n",
+      "Method Description:\nCreates a message that can be displayed or hidden near the top of the page.\n",
+      "Returns:\nmessage.Message.\n",
+      "Supported Script Types:\nClient scripts\nFor more information, see SuiteScript 2.0 Client Script Type.\n",
+      "Governance:\nNone\n",
+      "Module:\nN/ui/message Module\n",
+      "Since:\n2016.1\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=message.create(options)\n"
+    ]
+  },
+  "message.Type": {
+    "prefix": "message.Type",
+    "body": "message.Type.${1|CONFIRMATION,INFORMATION,WARNING,ERROR|}",
+    "description": [
+      "N/ui/message Module",
+      "message.Type\n",
+      "Enum Description:\nIndicates the type of message to display, which specifies the background color of the message and other message indicators.\nJavaScript does not include an enumeration type. The SuiteScript 2.0 documentation uses the term enumeration (or enum) to describe a plain JavaScript object with a flat, map-like structure. In this object, each key points to a read-only string value.\n",
+      "Supported Script Types:\nClient scripts\nFor more information, see SuiteScript 2.0 Client Script Type.\n",
+      "Module:\nN/ui/message Module\n",
+      "Since:\n2016.1\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=message.Type\n"
+    ]
+  },
+  "serverWidget.Assistant": {
+    "prefix": "serverWidget.Assistant",
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=serverWidget.Assistant for more information.",
+    "description": [
+      "N/ui/serverWidget Module",
+      "serverWidget.Assistant\n",
+      "Object Description:\nA scriptable, multi-step NetSuite assistant. An assistant contains a series of step that a user must complete to accomplish a larger goal. An assistant can be sequential, or non-sequential and include optional steps. Each page of the assistant is defined by a step.\nAll data and states for an assistant are tracked automatically throughout the user's session until completion of the assistant.\nYou can create a new assistant with the serverWidget.createAssistant(options) method.\nAfter you create an Assistant object, you can:\nBuild and run an assistant in your NetSuite account.\nAdd a variety of scriptable elements to the assistant including fields, steps, buttons, tabs, and sublists.\nFor a complete list of this object’s methods and properties, see Assistant Object Members.\nThe assistant cannot be used on externally available Suitelets.\n",
+      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
+      "Module:\nN/ui/serverWidget Module\n",
+      "Since:\n2015.2\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=serverWidget.Assistant\n"
+    ]
+  },
+  "Assistant.addField(options)": {
+    "prefix": "Assistant.addField(options)",
+    "body": [
+      "${1:Assistant}.addField({",
+      "\tid: ${2:string*},",
+      "\tlabel: ${3:string*},",
+      "\ttype: ${4:string*},",
+      "\tsource: ${5:string},",
+      "\tcontainer: ${6:string}",
+      "})"
+    ],
+    "description": [
+      "N/ui/serverWidget Module",
+      "Assistant.addField()\n",
+      "Method Description:\nAdds a field to an assistant. Use fields to record or display information specific to your needs.\n",
+      "Returns:\nserverWidget.Field object\n",
+      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
+      "Governance:\nNone\n",
+      "Module:\nN/ui/serverWidget Module\n",
+      "Since:\n2015.2\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.addField(options)\n"
+    ]
+  },
+  "Assistant.addFieldGroup(options)": {
+    "prefix": "Assistant.addFieldGroup(options)",
+    "body": [
+      "${1:Assistant}.addFieldGroup({",
+      "\tid: ${2:string*},",
+      "\tlabel: ${3:string*}",
+      "})"
+    ],
+    "description": [
+      "N/ui/serverWidget Module",
+      "Assistant.addFieldGroup()\n",
+      "Method Description:\nAdds a field group to the assistant. A field group is a collection of fields that can be displayed in a one or two column format. Assign a field to a field group in order to label, hide or collapse a group of fields.\nBy default, the field group is collapsible and appears expanded on the assistant page. To change this behavior, set the FieldGroup.isCollapsed and FieldGroup.isCollapsible properties.\n",
+      "Returns:\nserverWidget.FieldGroup object\n",
+      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
+      "Governance:\nNone\n",
+      "Module:\nN/ui/serverWidget Module\n",
+      "Since:\n2015.2\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.addFieldGroup(options)\n"
+    ]
+  },
+  "Assistant.addStep(options)": {
+    "prefix": "Assistant.addStep(options)",
+    "body": [
+      "${1:Assistant}.addStep({",
+      "\tid: ${2:string*},",
+      "\tlabel: ${3:string*}",
+      "})"
+    ],
+    "description": [
+      "N/ui/serverWidget Module",
+      "Assistant.addStep()\n",
+      "Method Description:\nAdds a step to an assistant. Steps define each page of the assistant.\nUse Assistant.isNotOrdered to control if the steps must be completed sequentially or in no specific order.\nIf you want to create help text for the step, you can use AssistantStep.helpText on the object returned.\n",
+      "Returns:\nserverWidget.AssistantStep object\n",
+      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
+      "Governance:\nNone\n",
+      "Module:\nN/ui/serverWidget Module\n",
+      "Since:\n2015.2\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.addStep(options)\n"
+    ]
+  },
+  "Assistant.addSublist(options)": {
+    "prefix": "Assistant.addSublist(options)",
+    "body": [
+      "${1:Assistant}.addSublist({",
+      "\tid: ${2:string*},",
+      "\tlabel: ${3:string*},",
+      "\ttype: ${4:string*}",
+      "})"
+    ],
+    "description": [
+      "N/ui/serverWidget Module",
+      "Assistant.addSublist()\n",
+      "Method Description:\nAdds a sublist to an assistant.\nOnly inline editor sublists are added. Other sublist types are not supported.\n",
+      "Returns:\nserverWidget.Sublist object\n",
+      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
+      "Governance:\nNone\n",
+      "Module:\nN/ui/serverWidget Module\n",
+      "Since:\n2015.2\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.addSublist(options)\n"
+    ]
+  },
+  "Assistant.getField(options)": {
+    "prefix": "Assistant.getField(options)",
+    "body": [
+      "${1:Assistant}.getField({",
+      "\tid: ${2:string*}",
+      "})"
+    ],
+    "description": [
+      "N/ui/serverWidget Module",
+      "Assistant.getField()\n",
+      "Method Description:\nReturns a field object on an assistant page.\n",
+      "Returns:\nserverWidget.Field\n",
+      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
+      "Governance:\nNone\n",
+      "Module:\nN/ui/serverWidget Module\n",
+      "Since:\n2015.2\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.getField(options)\n"
+    ]
+  },
+  "Assistant.getFieldGroup(options)": {
+    "prefix": "Assistant.getFieldGroup(options)",
+    "body": [
+      "${1:Assistant}.getFieldGroup({",
+      "\tid: ${2:string*}",
+      "})"
+    ],
+    "description": [
+      "N/ui/serverWidget Module",
+      "Assistant.getFieldGroup()\n",
+      "Method Description:\nReturns a field group on an assistant page.\n",
+      "Returns:\nserverWidget.FieldGroup object\n",
+      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
+      "Governance:\nNone\n",
+      "Module:\nN/ui/serverWidget Module\n",
+      "Since:\n2015.2\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.getFieldGroup(options)\n"
+    ]
+  },
+  "Assistant.getFieldGroupIds()": {
+    "prefix": "Assistant.getFieldGroupIds()",
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.getFieldGroupIds() for more information.",
+    "description": [
+      "N/ui/serverWidget Module",
+      "Assistant.getFieldGroupIds()\n",
+      "Method Description:\nRetrieves all the internal IDs for field groups in an assistant.\n",
+      "Returns:\nstring[]\n",
+      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
+      "Governance:\nNone\n",
+      "Module:\nN/ui/serverWidget Module\n",
+      "Since:\n2015.2\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.getFieldGroupIds()\n"
+    ]
+  },
+  "Assistant.getFieldIds()": {
+    "prefix": "Assistant.getFieldIds()",
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.getFieldIds() for more information.",
+    "description": [
+      "N/ui/serverWidget Module",
+      "Assistant.getFieldIds()\n",
+      "Method Description:\nGets all the internal IDs for fields in an assistant.\n",
+      "Returns:\nstring[]\n",
+      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
+      "Governance:\nNone\n",
+      "Module:\nN/ui/serverWidget Module\n",
+      "Since:\n2015.2\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.getFieldIds()\n"
+    ]
+  },
+  "Assistant.getFieldIdsByFieldGroup(fieldGroup)": {
+    "prefix": "Assistant.getFieldIdsByFieldGroup(fieldGroup)",
+    "body": [
+      "${1:Assistant}.getFieldIdsByFieldGroup(fieldGroup){",
+      "\tfieldGroup: ${2:string*}",
+      "})"
+    ],
+    "description": [
+      "N/ui/serverWidget Module",
+      "Assistant.getFieldIdsByFieldGroup(fieldGroup)\n",
+      "Method Description:\nGets all field IDs in the assistant field group.\n",
+      "Returns:\nstring[]\n",
+      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
+      "Governance:\nNone\n",
+      "Module:\nN/ui/serverWidget Module\n",
+      "Since:\n2016.1\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.getFieldIdsByFieldGroup(fieldGroup)\n"
+    ]
+  },
+  "Assistant.getLastAction()": {
+    "prefix": "Assistant.getLastAction()",
+    "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.getLastAction() for more information.",
+    "description": [
+      "N/ui/serverWidget Module",
+      "Assistant.getLastAction()\n",
+      "Method Description:\nGets the last action taken by the user.\nTo identify the step that the last action came from, use Assistant.getLastStep().\n",
+      "Returns:\nstring\n",
+      "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
+      "Governance:\nNone\n",
+      "Module:\nN/ui/serverWidget Module\n",
+      "Since:\n2015.2\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.getLastAction()\n"
+    ]
+  },
   "Assistant.getLastStep()": {
     "prefix": "Assistant.getLastStep()",
     "body": "// Please search https://www.netsuite.com/app/help/helpcenter.nl?search=Assistant.getLastStep() for more information.",
@@ -16978,7 +16967,7 @@
     "prefix": "Field.setHelpText(options)",
     "body": [
       "${1:Field}.setHelpText({",
-      "\thttps://www.netsuite.com/app/help/helpcenter.nl?search= ${2:string*},",
+      "\thelp: ${2:string*},",
       "\tshowInlineForAssistant: ${3:boolean}",
       "})"
     ],
@@ -18156,7 +18145,7 @@
     "description": [
       "N/ui/serverWidget Module",
       "Sublist.addMarkAllButtons()\n",
-      "Method Description:\nAdds a Mark All and an Unmark All button to a LIST type of sublist.\n",
+      "Method Description:\nAdds a Mark All and an Unmark All button to a LIST type of sublist.\nSee Using Buttons in NetSuite for information on how Mark All/Unmark All Buttons works in NetSuite.\n",
       "Returns:\nA serverWidget.Button[] object\n",
       "Supported Script Types:\nSuiteScript 2.0 Suitelet Script Type and SuiteScript 2.0 User Event Script Type (beforeLoad(scriptContext))\n",
       "Governance:\nNone\n",
@@ -18489,7 +18478,7 @@
   },
   "serverWidget.FieldType": {
     "prefix": "serverWidget.FieldType",
-    "body": "serverWidget.FieldType.${1|CHECKBOX,CURRENCY,DATE,DATETIME,DATETIMETZ,EMAIL,FILE,FLOAT,HELP,INLINEHTML,INTEGER,IMAGE,LABEL|}",
+    "body": "serverWidget.FieldType.${1|CHECKBOX,LONGTEXT,CURRENCY,MULTISELECT,DATE,PASSWORD,DATETIME,PERCENT,DATETIMETZ,PHONE,EMAIL,SELECT,FILE,RADIO,FLOAT,RICHTEXT,HELP,TEXT,INLINEHTML,TEXTAREA,INTEGER,TIMEOFDAY,IMAGE,URL,LABEL,|}",
     "description": [
       "N/ui/serverWidget Module",
       "serverWidget.FieldType\n",
@@ -18609,9 +18598,9 @@
     "prefix": "url.resolveRecord(options)",
     "body": [
       "${1:url}.resolveRecord({",
-      "\trecordType: ${2:string*},",
+      "\tisEditMode: ${2:boolean true | false*},",
       "\trecordId: ${3:string*},",
-      "\tisEditMode: ${4:boolean true | false*},",
+      "\trecordType: ${4:string*},",
       "\tparams: ${5:Object}",
       "})"
     ],
@@ -18631,8 +18620,8 @@
     "prefix": "url.resolveScript(options)",
     "body": [
       "${1:url}.resolveScript({",
-      "\tscriptId: ${2:string*},",
-      "\tdeploymentId: ${3:string*},",
+      "\tdeploymentId: ${2:string*},",
+      "\tscriptId: ${3:string*},",
       "\tparams: ${4:Object},",
       "\treturnExternalUrl: ${5:boolean}",
       "})"
@@ -18694,14 +18683,14 @@
     "prefix": "util.isArray(obj)",
     "body": [
       "${1:util}.isArray(obj){",
-      "\tobj: ${2:Object | Primitive}",
+      "\tobj: ${2:Object | Primitive*}",
       "})"
     ],
     "description": [
       "N/util Module",
       "util.isArray(obj)\n",
       "Method Description:\nReturns true if the obj parameter is a JavaScript Array object and false otherwise.\n",
-      "Returns:\nboolean true | false\n",
+      "Returns:\nboolean\n",
       "Supported Script Types:\nAll script types\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Governance:\nNone\n",
       "Module:\nN/util Module\n",
@@ -18714,14 +18703,14 @@
     "prefix": "util.isBoolean(obj)",
     "body": [
       "${1:util}.isBoolean(obj){",
-      "\tobj: ${2:Object | Primitive}",
+      "\tobj: ${2:Object | Primitive*}",
       "})"
     ],
     "description": [
       "N/util Module",
       "util.isBoolean(obj)\n",
-      "Method Description:\nReturns true if the obj parameter is a boolean and false otherwise.\n",
-      "Returns:\nboolean true | false\n",
+      "Method Description:\nReturns true if the obj parameter is a JavaScript Boolean and false otherwise.\n",
+      "Returns:\nboolean\n",
       "Supported Script Types:\nAll script types\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Governance:\nNone\n",
       "Module:\nN/util Module\n",
@@ -18733,14 +18722,14 @@
     "prefix": "util.isDate(obj)",
     "body": [
       "${1:util}.isDate(obj){",
-      "\tobj: ${2:Object | Primitive}",
+      "\tobj: ${2:Object | Primitive*}",
       "})"
     ],
     "description": [
       "N/util Module",
       "util.isDate(obj)\n",
       "Method Description:\nReturns true if the obj parameter is a JavaScript Date object and false otherwise.\n",
-      "Returns:\nboolean true | false\n",
+      "Returns:\nboolean\n",
       "Supported Script Types:\nAll script types\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Governance:\nNone\n",
       "Module:\nN/util Module\n",
@@ -18748,18 +18737,37 @@
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=util.isDate(obj)\n"
     ]
   },
+  "util.isAsyncFunction(obj)": {
+    "prefix": "util.isAsyncFunction(obj)",
+    "body": [
+      "${1:util}.isAsyncFunction(obj){",
+      "\tobj: ${2:Object | Primitive*}",
+      "})"
+    ],
+    "description": [
+      "N/util Module",
+      "util.isAsyncFunction(obj)\n",
+      "Method Description:\nReturns true if the obj parameter is a JavaScript AsyncFunction and false otherwise.\n",
+      "Returns:\nboolean\n",
+      "Supported Script Types:\nAll script types\nFor more information, see SuiteScript 2.0 Script Types.\n",
+      "Governance:\nNone\n",
+      "Module:\nN/util Module\n",
+      "Since:\n2020.1\n",
+      "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=util.isAsyncFunction(obj)\n"
+    ]
+  },
   "util.isFunction(obj)": {
     "prefix": "util.isFunction(obj)",
     "body": [
       "${1:util}.isFunction(obj){",
-      "\tobj: ${2:Object | Primitive}",
+      "\tobj: ${2:Object | Primitive*}",
       "})"
     ],
     "description": [
       "N/util Module",
       "util.isFunction(obj)\n",
-      "Method Description:\nReturns true if the obj parameter is a JavaScript Function object and false otherwise.\n",
-      "Returns:\nboolean true | false\n",
+      "Method Description:\nReturns true if the obj parameter is a JavaScript Function or AsyncFunction and false otherwise.\n",
+      "Returns:\nboolean\n",
       "Supported Script Types:\nAll script types\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Governance:\nNone\n",
       "Module:\nN/util Module\n",
@@ -18771,14 +18779,14 @@
     "prefix": "util.isNumber(obj)",
     "body": [
       "${1:util}.isNumber(obj){",
-      "\tobj: ${2:Object | Primitive}",
+      "\tobj: ${2:Object | Primitive*}",
       "})"
     ],
     "description": [
       "N/util Module",
       "util.isNumber(obj)\n",
       "Method Description:\nReturns true if the obj parameter is a JavaScript Number object or primitive, and false otherwise.\n",
-      "Returns:\nboolean true | false\n",
+      "Returns:\nboolean\n",
       "Supported Script Types:\nAll script types\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Governance:\nNone\n",
       "Module:\nN/util Module\n",
@@ -18790,14 +18798,14 @@
     "prefix": "util.isObject(obj)",
     "body": [
       "${1:util}.isObject(obj){",
-      "\tobj: ${2:Object | Primitive}",
+      "\tobj: ${2:Object | Primitive*}",
       "})"
     ],
     "description": [
       "N/util Module",
       "util.isObject(obj)\n",
-      "Method Description:\nReturns true if the obj parameter is a plain JavaScript object(new Object() or {} for example), and false otherwise.\nUse this method, for example, to verify that a variable is a JavaScript object and not a JavaScript Function.\n",
-      "Returns:\nboolean true | false\n",
+      "Method Description:\nReturns true if the obj parameter is a plain JavaScript object (new Object() or {} for example), and false otherwise.\nUse this method, for example, to verify that a variable is a JavaScript object and not a JavaScript Function.\n",
+      "Returns:\nboolean\n",
       "Supported Script Types:\nAll script types\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Governance:\nNone\n",
       "Module:\nN/util Module\n",
@@ -18809,14 +18817,14 @@
     "prefix": "util.isRegExp(obj)",
     "body": [
       "${1:util}.isRegExp(obj){",
-      "\tobj: ${2:Object | Primitive}",
+      "\tobj: ${2:Object | Primitive*}",
       "})"
     ],
     "description": [
       "N/util Module",
       "util.isRegExp(obj)\n",
       "Method Description:\nReturns true if the obj parameter is a JavaScript RegExp object, and false otherwise.\n",
-      "Returns:\nboolean true | false\n",
+      "Returns:\nboolean\n",
       "Supported Script Types:\nAll script types\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Governance:\nNone\n",
       "Module:\nN/util Module\n",
@@ -18828,14 +18836,14 @@
     "prefix": "util.isString(obj)",
     "body": [
       "${1:util}.isString(obj){",
-      "\tobj: ${2:Object | Primitive}",
+      "\tobj: ${2:Object | Primitive*}",
       "})"
     ],
     "description": [
       "N/util Module",
       "util.isString(obj)\n",
       "Method Description:\nReturns true if the obj parameter is a JavaScript String object or primitive, and false otherwise\n",
-      "Returns:\nboolean true | false\n",
+      "Returns:\nboolean\n",
       "Supported Script Types:\nAll script types\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Governance:\nNone\n",
       "Module:\nN/util Module\n",
@@ -18862,8 +18870,8 @@
     "prefix": "util.each(iterable, callback)",
     "body": [
       "${1:util}.each(iterable, callback){",
-      "\titerable: ${2:Object | Array},",
-      "\tcallback: ${3:Function}",
+      "\titerable: ${2:Object | Array*},",
+      "\tcallback: ${3:Function*}",
       "})"
     ],
     "description": [
@@ -18884,8 +18892,8 @@
     "description": [
       "N/util Module",
       "util.extend(receiver, contributor)\n",
-      "Method Description:\nMethod used to copy the properties in a source object to a destination object. Returns the destination object.\nYou can use this method to merge two objects.\n",
-      "Returns:\nThe Object receiving the properties copied from the contributor\n",
+      "Method Description:\nCopies the properties in a source object to a destination object.\nYou can use this method to merge two objects.\n",
+      "Returns:\nThe destination object.\n",
       "Supported Script Types:\nAll script types\nFor more information, see SuiteScript 2.0 Script Types.\n",
       "Governance:\nNone\n",
       "Module:\nN/util Module\n",
@@ -20349,5 +20357,5 @@
       "Since:\n2015.2\n",
       "\nSearch NetSuite - \nhttps://www.netsuite.com/app/help/helpcenter.nl?search=xml.NodeType\n"
     ]
-  }
+  },
 }
