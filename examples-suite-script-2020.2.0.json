@@ -49946,5 +49946,27 @@
             "Since:\n2015.2\n",
             "\nSearch NetSuite - \nhttps://system.netsuite.com/app/help/helpcenter.nl?search=xml.NodeType\n"
         ]
+    },
+    "EXAMPLE (SuiteScript 2.x User Event Script Type) context.UserEventType": {
+        "prefix": "x.context.UserEventType",
+        "body": [
+            "// Code Example 1",
+            "//Add additional code",
+            "//...",
+            "function beforeLoad(context) {",
+            "    if (context.type !== context.UserEventType.CREATE)",
+            "        return;",
+            "//...",
+            "//Add additional code",
+            "",
+            "//SOURCE: https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4387799721"
+        ],
+        "description": [
+            "SuiteScript 2.x User Event Script Type",
+            "Enum Description:\nHolds the string values for user event execution contexts.\nThe beforeLoad, beforeSubmit, and afterSubmit entry points include the context.type parameter that takes on one of the enum values.\nJavaScript does not include an enumeration type. The SuiteScript 2.x documentation utilizes the term enumeration (or enum) to describe the following: a plain JavaScript object with a flat, map-like structure.\nWithin this object, each key points to a read-only string value",
+            "Module:\nSuiteScript 2.x User Event Script Type\n",
+            "Since:\nVersion 2015 Release 2\n",
+            "\nSearch NetSuite - \nhttps://system.netsuite.com/app/help/helpcenter.nl?search=context.UserEventType\n"
+        ]
     }
 }
